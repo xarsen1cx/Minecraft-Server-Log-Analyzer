@@ -1,0 +1,19 @@
+[
+    {
+      "pattern": "java\\.net\\.ConnectException: Connection refused",
+      "solution": "Check if the server is running and reachable."
+    },
+    {
+      "pattern": "Plugin X failed to load",
+      "solution": "Ensure Plugin X is compatible with your Minecraft version."
+    },
+    {
+      "pattern": "ItemLocksFabric",
+      "solution": "Check if the ItemLocksFabric mod is client-side only, you should remove this from your server."
+    },
+    {
+      "pattern": "java\\.lang\\.OutOfMemoryError",
+      "solution": "Your server has run out of memory, you may need to upgrade your server's RAM, or reduce the number of plugins or mods you are using."
+    }
+  ]
+  
