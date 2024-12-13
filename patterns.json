@@ -18,7 +18,87 @@
     {
       "pattern": "java\\.lang\\.ClassCastException.*jdk\\.internal\\.loader",
       "solution": "This error occurs when there is an incompatible class cast in your code or libraries. Check your plugins and mods for compatibility or update your Java version."
+    },
+    {
+      "pattern": "java\\.io\\.FileNotFoundException:.*",
+      "solution": "A required file is missing. Check your modpack or server files for missing or corrupted files."
+    },
+    {
+      "pattern": "java\\.lang\\.StackOverflowError",
+      "solution": "This indicates a recursive loop in your code or a plugin. Disable recent changes or plugins to debug the issue."
+    },
+    {
+      "pattern": "java\\.util\\.zip\\.ZipException: error in opening zip file",
+      "solution": "A mod or plugin is corrupted. Re-download the affected mod/plugin and replace it on the server."
+    },
+    {
+      "pattern": "Exception in server tick loop",
+      "solution": "A mod, plugin, or configuration error is causing the server to crash during a tick. Check recent changes and logs for details."
+    },
+    {
+      "pattern": "java\\.lang\\.NullPointerException",
+      "solution": "A plugin or mod is trying to access an invalid object. Update or remove problematic plugins/mods."
+    },
+    {
+      "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
+      "solution": "A required mod is missing. Ensure all mod dependencies are installed and correctly configured."
+    },
+    {
+      "pattern": "java\\.net\\.SocketTimeoutException",
+      "solution": "A player or the server is experiencing network issues. Check the server's network configuration or the player's internet connection."
+    },
+    {
+      "pattern": "Cannot bind to port",
+      "solution": "The port the server is trying to use is already occupied. Ensure no other server or application is using the same port."
+    },
+    {
+      "pattern": "Outdated server! I’m still on .*",
+      "solution": "The server is running an older version than the client. Update the server to match the client's version."
+    },
+    {
+      "pattern": "Outdated client! Please use .*",
+      "solution": "The client is running an older version than the server. Update the client to match the server's version."
+    },
+    {
+      "pattern": "You need to agree to the EULA",
+      "solution": "Open the 'eula.txt' file in your server directory and change 'eula=false' to 'eula=true' after reviewing the agreement."
+    },
+    {
+      "pattern": "This crash report has been saved to:",
+      "solution": "The server has generated a crash report. Open the crash report file for more details about the issue."
+    },
+    {
+      "pattern": "UnknownHostException",
+      "solution": "The server address could not be resolved. Check your DNS settings or ensure the server address is correct."
+    },
+    {
+      "pattern": "Failed to verify username!",
+      "solution": "Check if Mojang authentication servers are down or if the server is set to 'online-mode=true' in the server.properties file."
+    },
+    {
+      "pattern": "Entity ticking error",
+      "solution": "A problematic entity is causing the server to crash. Use tools like MCEdit to remove problematic entities."
+    },
+    {
+      "pattern": "Server is overloaded",
+      "solution": "The server is experiencing performance issues. Reduce the number of entities, plugins, or players, or allocate more resources to the server."
+    },
+    {
+      "pattern": "java\\.lang\\.IllegalArgumentException: Chunk .* is already being loaded",
+      "solution": "A corrupted chunk is causing issues. Use chunk-fixing tools or remove the chunk manually."
+    },
+    {
+      "pattern": "java\\.lang\\.IllegalStateException: Recipe .* not found",
+      "solution": "A mod or plugin is referencing a missing or invalid recipe. Update mods/plugins or check for missing dependencies."
+    },
+    {
+      "pattern": "NoClassDefFoundError",
+      "solution": "A mod or plugin is missing a required library. Ensure all dependencies are installed."
+    },
+    {
+      "pattern": "IllegalPluginAccessException",
+      "solution": "A plugin is trying to access an unsupported feature. Update the plugin or check for compatibility issues."
     }
+]
 
-  ]
   
