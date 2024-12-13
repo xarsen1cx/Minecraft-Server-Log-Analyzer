@@ -118,6 +118,12 @@
     "pattern": "openjdk version \\\"(?<version>[\\d\\.]+)\\\" (?<date>[\\d\\-]+) LTS",
     "description": "Java version and build date detected.",
     "solution": "Ensure the required Java version matches the server or modpack requirements."
+  },
+  {
+    "id": 22,
+    "pattern": "Distant Horizons.*encountered an error during the sided_setup event phase",
+    "description": "Error with the Distant Horizons mod during the sided setup event phase. The error occurs because a configGui instance is null, causing a NullPointerException. This results in a server startup failure.",
+    "solution": "Ensure the Distant Horizons mod version is compatible with the server/forge version. Verify if the Distant Horizons mod requires additional libraries or dependencies not included in your modpack. Remove this mod to see if your server will boot."
   }
 ]
 
