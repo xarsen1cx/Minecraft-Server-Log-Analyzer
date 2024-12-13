@@ -14,6 +14,11 @@
     {
       "pattern": "java\\.lang\\.OutOfMemoryError",
       "solution": "Your server has run out of memory, you may need to upgrade your server's RAM, or reduce the number of plugins or mods you are using."
+    },
+    {
+      "pattern": "java\\.lang\\.ClassCastException.*jdk\\.internal\\.loader",
+      "solution": "This error occurs when there is an incompatible class cast in your code or libraries. Check your plugins and mods for compatibility or update your Java version."
     }
+
   ]
   
