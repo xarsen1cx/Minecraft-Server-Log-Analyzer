@@ -214,6 +214,41 @@
     "pattern": "Invalid stack for slot: .*\\((?<mod>[a-zA-Z0-9._-]+)\\)",
     "description": "A mod ('${mod}') encountered an invalid stack for a specific inventory slot.",
     "solution": "Ensure the mod '${mod}' is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity."
+  },
+    {
+    "id": 32,
+    "risk": "Critical",
+    "pattern": "com\\.google\\.gson\\.JsonSyntaxException: Expected name to be an item, was unknown string '(?<mod>[a-zA-Z0-9_:-]+)'",
+    "description": "A loot table contains an invalid or unknown item in the mod: ${mod}.",
+    "solution": "Verify the loot table configuration for ${mod}. Ensure the specified items exist and are correctly registered."
+  },
+  {
+    "id": 33,
+    "risk": "High",
+    "pattern": "java\\.lang\\.IllegalArgumentException: Can't find block (?<mod>[a-zA-Z0-9_:-]+)",
+    "description": "The block referenced in the loot table is missing in the mod: ${mod}.",
+    "solution": "Check if the block exists in the ${mod} mod or verify that the mod version is correct."
+  },
+  {
+    "id": 34,
+    "risk": "Critical",
+    "pattern": "net\\.minecraft\\.world\\.level\\.storage\\.loot\\.LootTables.*Couldn't parse loot table (?<mod>[a-zA-Z0-9_:-]+):blocks/[a-zA-Z0-9_:-]+",
+    "description": "Loot table parsing failed for a block in the mod: ${mod}.",
+    "solution": "Verify the loot table syntax in the ${mod} mod. Ensure the items, blocks, and properties referenced exist."
+  },
+  {
+    "id": 35,
+    "risk": "Medium",
+    "pattern": "java\\.util\\.concurrent\\.ForkJoinTask.*",
+    "description": "A concurrency task encountered an error, possibly due to high server load.",
+    "solution": "Reduce the server load or check for problematic tasks in mods or plugins. Consider optimizing server performance."
+  },
+  {
+    "id": 36,
+    "risk": "High",
+    "pattern": "dev\\.latvian\\.mods\\.kubejs\\.core\\.LootTablesKJS.*applyKJS0.*",
+    "description": "A loot table in the KubeJS mod failed to apply.",
+    "solution": "Check the KubeJS scripts for syntax or logical errors related to loot tables."
   }
   
 ]
