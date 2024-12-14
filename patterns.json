@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "risk": "High",
     "pattern": "java\\.net\\.ConnectException: Connection refused",
     "description": "This error occurs when the server cannot be reached.",
     "solution": "Check if the server is running and reachable."
@@ -13,118 +14,152 @@
   },
   {
     "id": 3,
+    "risk": "High",
     "pattern": "ItemLocksFabric",
     "description": "The ItemLocksFabric mod might be client-side only.",
     "solution": "Remove the ItemLocksFabric mod from your server."
   },
   {
     "id": 4,
+    "risk": "High",
     "pattern": "java\\.lang\\.OutOfMemoryError",
     "description": "The server has run out of memory.",
     "solution": "Upgrade the server's RAM or reduce the number of plugins or mods."
   },
   {
     "id": 5,
+    "risk": "High",
     "pattern": "java\\.lang\\.ClassCastException.*jdk\\.internal\\.loader",
     "description": "An incompatible class cast was attempted.",
     "solution": "Check for plugin/mod compatibility or update your Java version."
   },
   {
     "id": 6,
+    "risk": "High",
     "pattern": "java\\.io\\.FileNotFoundException:.*",
     "description": "A required file is missing or corrupted.",
     "solution": "Verify your modpack or server files."
   },
   {
     "id": 7,
+    "risk": "High",
     "pattern": "java\\.lang\\.StackOverflowError",
     "description": "A recursive loop in your code or a plugin caused this error.",
     "solution": "Disable recent changes or plugins to debug."
   },
   {
     "id": 8,
+    "risk": "High",
     "pattern": "java\\.util\\.zip\\.ZipException: error in opening zip file",
     "description": "A mod or plugin file is corrupted.",
     "solution": "Re-download and replace the affected mod/plugin."
   },
   {
     "id": 9,
+    "risk": "High",
     "pattern": "Exception in server tick loop",
     "description": "The server crashed due to a mod, plugin, or configuration error.",
     "solution": "Check logs and recent changes for the issue."
   },
   {
     "id": 10,
+    "risk": "High",
     "pattern": "java\\.lang\\.NullPointerException",
     "description": "A plugin or mod accessed an invalid object.",
     "solution": "Update or remove the problematic plugin/mod."
   },
   {
     "id": 11,
+    "risk": "High",
     "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
     "description": "A required mod is missing.",
     "solution": "Install all required mod dependencies."
   },
   {
     "id": 12,
+    "risk": "Medium",
     "pattern": "java\\.net\\.SocketTimeoutException",
     "description": "Network issues are causing timeouts.",
     "solution": "Check the server's network configuration or player's internet connection."
   },
   {
     "id": 13,
+    "risk": "High",
     "pattern": "Cannot bind to port",
     "description": "The port the server needs is already in use.",
     "solution": "Ensure no other server or application is using the same port."
   },
   {
     "id": 14,
+    "risk": "High",
     "pattern": "Outdated server! I’m still on .*",
     "description": "The server version is outdated compared to the client.",
     "solution": "Update the server to match the client version."
   },
   {
     "id": 15,
+    "risk": "High",
     "pattern": "Outdated client! Please use .*",
     "description": "The client version is outdated compared to the server.",
     "solution": "Update the client to match the server version."
   },
   {
     "id": 16,
+    "risk": "High",
     "pattern": "You need to agree to the EULA",
     "description": "The EULA agreement has not been accepted.",
     "solution": "Set 'eula=true' in the 'eula.txt' file after reviewing it."
   },
   {
     "id": 17,
+    "risk": "High",
     "pattern": "This crash report has been saved to:",
     "description": "The server generated a crash report.",
     "solution": "Check the crash report file for details."
   },
   {
     "id": 19,
+    "risk": "High",
     "pattern": "Failed to verify username!",
     "description": "Mojang authentication servers may be down, or server settings need adjustment.",
     "solution": "Check the server.properties file and Mojang status."
   },
   {
     "id": 20,
+    "risk": "High",
     "pattern": "Entity ticking error",
     "description": "A problematic entity caused the crash.",
     "solution": "Use MCEdit or similar tools to remove the entity."
   },
   {
     "id": 21,
+    "risk": "High",
     "pattern": "openjdk version \\\"(?<version>[\\d\\.]+)\\\" (?<date>[\\d\\-]+) LTS",
     "description": "Java version and build date detected.",
     "solution": "Ensure the required Java version matches the server or modpack requirements."
   },
   {
     "id": 22,
+    "risk": "High",
     "pattern": "Distant Horizons.*encountered an error during the sided_setup event phase",
     "description": "Error with the Distant Horizons mod during the sided setup event phase. The error occurs because a configGui instance is null, causing a NullPointerException. This results in a server startup failure.",
     "solution": "Ensure the Distant Horizons mod version is compatible with the server/forge version. Verify if the Distant Horizons mod requires additional libraries or dependencies not included in your modpack. Remove this mod to see if your server will boot."
+  },
+  {
+    "id": 23,
+    "risk": "High",
+    "pattern": "Registry entry.*wildernature:[a-z_]+.*was not realized!",
+    "description": "Multiple warnings indicate that Wilder Nature entity types (e.g., wildernature:raccoon) were not realized during the registry phase.",
+    "solution": "Verify that the Wilder Nature mod is compatible with the current Forge and Minecraft versions. Ensure all dependencies for the Wilder Nature mod are present and up to date. Reset the mod’s configuration files in the config/ directory to their defaults. Temporarily disable other mods to test if conflicts prevent Wilder Nature from loading entities properly. Check for updates to Wilder Nature addressing this issue. Report this issue on the mod's support page or issue tracker."
+  },
+  {
+    "id": 24,
+    "risk": "High",
+    "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took \\d+\\.\\d+ seconds.*",
+    "description": "The server detected a hang, where a single server tick took significantly longer than the expected maximum of 0.05 seconds. This indicates severe lag or a deadlock.",
+    "solution": "Check for plugins or mods causing excessive load. Verify your server's hardware performance, such as CPU and memory usage. Consider reducing the number of mods, plugins, or entities on the server. If the issue persists, investigate thread dumps or logs for potential deadlocks or infinite loops."
   }
+  
 ]
 
   
