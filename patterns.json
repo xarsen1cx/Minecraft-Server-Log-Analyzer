@@ -158,6 +158,62 @@
     "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took \\d+\\.\\d+ seconds.*",
     "description": "The server detected a hang, where a single server tick took significantly longer than the expected maximum of 0.05 seconds. This indicates minor server lag.",
     "solution": "You can turn off watchdog by going to - YourServerFolder/server.properties - max-tick-time=-1 - Default is 60000"
+  },
+    {
+    "id": 25,
+    "risk": "minor",
+    "pattern": "Server is still starting! Please wait before reconnecting\\.",
+    "description": "A player attempted to connect while the server was still starting.",
+    "solution": "Inform players to wait for the server to fully start before reconnecting."
+  },
+  {
+    "id": 26,
+    "risk": "Low",
+    "pattern": "Preparing spawn area: \\d+%",
+    "description": "The server is preparing the spawn area.",
+    "solution": "This is normal during server startup and does not require action."
+  },
+  {
+    "id": 27,
+    "risk": "Medium",
+    "pattern": "A new sound was added after the sounds were registered and therefore the new sound could not be added!",
+    "description": "Chance Cubes mod failed to register a new sound after the sound registration phase.",
+    "solution": "Verify that the Chance Cubes mod is compatible with the current version of Minecraft/Forge."
+  },
+  {
+    "id": 28,
+    "risk": "Low",
+    "pattern": "Couldn't fully analyze .* free_runners_armored.*missing knowledge for \\{.*\\}",
+    "description": "The Immersive Engineering mod encountered an incomplete analysis for free_runners_armored.",
+    "solution": "Ensure all dependencies for Immersive Engineering are installed and compatible. If the issue persists, report it to the mod developers."
+  },
+  {
+    "id": 29,
+    "risk": "High",
+    "pattern": "Could not serialize .*\\(class .*\\) - will not be sent to client!",
+    "description": "A mod or plugin failed to serialize a custom argument type, causing communication issues with the client.",
+    "solution": "Check the logs for details about the specific mod or plugin causing the issue. Ensure it is compatible with the current Minecraft/Forge version."
+  },
+  {
+    "id": 30,
+    "risk": "Critical",
+    "pattern": "net\\.minecraft\\.ReportedException: Ticking block entity",
+    "description": "A block entity caused the server to crash.",
+    "solution": "Use a tool like MCEdit to locate and remove the problematic block entity. Check mod compatibility and update all mods to their latest versions."
+  },
+  {
+    "id": 31,
+    "risk": "Critical",
+    "pattern": "Invalid stack for slot: .*",
+    "description": "A mod (e.g., Mekanism) encountered an invalid stack for a specific inventory slot.",
+    "solution": "Ensure the mod causing the issue is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity."
+  },
+  {
+    "id": 31,
+    "risk": "Critical",
+    "pattern": "Invalid stack for slot: .*\\((?<mod>[a-zA-Z0-9._-]+)\\)",
+    "description": "A mod ('${mod}') encountered an invalid stack for a specific inventory slot.",
+    "solution": "Ensure the mod '${mod}' is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity."
   }
   
 ]
