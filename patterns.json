@@ -155,7 +155,7 @@
   {
     "id": 24,
     "risk": "High",
-    "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took \\d+\\.\\d+ seconds.*",
+    "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took (\\d+\\.\\d+) seconds.*",
     "description": "The server detected a hang, where a single server tick took significantly longer than the expected maximum of 0.05 seconds. This indicates severe lag or a deadlock.",
     "solution": "Check for plugins or mods causing excessive load. Verify your server's hardware performance, such as CPU and memory usage. Consider reducing the number of mods, plugins, or entities on the server. If the issue persists, investigate thread dumps or logs for potential deadlocks or infinite loops."
   }
