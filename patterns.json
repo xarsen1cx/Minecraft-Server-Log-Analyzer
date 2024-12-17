@@ -249,6 +249,27 @@
     "pattern": "dev\\.latvian\\.mods\\.kubejs\\.core\\.LootTablesKJS.*applyKJS0.*",
     "description": "A loot table in the KubeJS mod failed to apply.",
     "solution": "Check the KubeJS scripts for syntax or logical errors related to loot tables."
+  },
+  {
+  "id": "37",
+  "pattern": "\\[.*?ERROR\\]: Username '(.*?)' tried to join with an invalid session",
+  "description": "A player attempted to join with an invalid session.",
+  "solution": "The session for the player '${1}' is invalid. Ask the player to log out of their Minecraft client and log back in to refresh their session.",
+  "risk": "Minor"
+  },
+  {
+  "id": "38",
+  "pattern": "\\[.*?ERROR\\]: Stack:\\s+(.*?\\.java:\\d+)",
+  "description": "A stack trace was reported during an error.",
+  "solution": "Review the stack trace for the exact source file and line number: '${1}'. The error likely originates from this location.",
+  "risk": "Medium"
+  },
+  {
+  "id": "39",
+  "pattern": "\\[.*?WARN\\]: \\[LuckPerms\\] Processing login for (.*?) took (\\d+)ms",
+  "description": "LuckPerms login processing for '${1}' took ${2} milliseconds.",
+  "solution": "Optimize LuckPerms performance by reviewing server load and connection times.",
+  "risk": "Low"
   }
   
 ]
