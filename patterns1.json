@@ -1,0 +1,1021 @@
+  [
+    {
+      "id": 1,
+      "risk": "High",
+      "pattern": "java\\.net\\.ConnectException: Connection refused",
+      "description": "This error occurs when the server cannot be reached.",
+      "solution": "Check if the server is running and reachable.",
+      "causes": [
+        "The server is down or not started.",
+        "Incorrect server address or port.",
+        "Firewall or network configuration blocking the connection."
+      ],
+      "examples": [
+        "java.net.ConnectException: Connection refused: no further information"
+      ],
+      "troubleshooting": [
+        "Ensure the server is running and reachable.",
+        "Check firewall and port forwarding settings.",
+        "Verify the server IP and port in the client configuration."
+      ],
+      "links": {
+        "Network Configuration": "https://minecraft.fandom.com/wiki/Server"
+      }
+    },
+
+    {
+      "id": 2,
+      "risk": "Medium",
+      "pattern": "Plugin (?<plugin>[a-zA-Z0-9]+) failed to load",
+      "description": "The plugin '${plugin}' failed to load due to compatibility or configuration issues.",
+      "solution": "Ensure the plugin '${plugin}' is compatible with your Minecraft version.",
+      "causes": [
+        "Plugin version is outdated or incompatible.",
+        "Missing dependencies required by the plugin.",
+        "Plugin files are corrupted."
+      ],
+      "examples": [
+        "Plugin None given yet...."
+      ],
+      "troubleshooting": [
+        "Update the plugin to the latest version.",
+        "Check if all required dependencies are installed.",
+        "Re-download the plugin files and verify their integrity."
+      ],
+      "links": {
+        "Plugin Troubleshooting": "https://www.spigotmc.org/forums/spigot-plugin-help.42/"
+      }
+    },
+
+    {
+      "id": 3,
+      "risk": "High",
+      "pattern": "ItemLocksFabric",
+      "description": "The ItemLocksFabric mod might be client-side only.",
+      "solution": "Remove the ItemLocksFabric mod from your server.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 4,
+      "risk": "High",
+      "pattern": "java\\.lang\\.OutOfMemoryError",
+      "description": "The server has run out of memory.",
+      "solution": "Upgrade the server's RAM or reduce the number of plugins or mods.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 5,
+      "risk": "High",
+      "pattern": "java\\.lang\\.ClassCastException.*jdk\\.internal\\.loader",
+      "description": "An incompatible class cast was attempted.",
+      "solution": "Check for plugin/mod compatibility or update your Java version.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 6,
+      "risk": "High",
+      "pattern": "java\\.io\\.FileNotFoundException:.*",
+      "description": "A required file is missing or corrupted.",
+      "solution": "Verify your modpack or server files.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 7,
+      "risk": "High",
+      "pattern": "java\\.lang\\.StackOverflowError",
+      "description": "A recursive loop in your code or a plugin caused this error.",
+      "solution": "Disable recent changes or plugins to debug.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 8,
+      "risk": "High",
+      "pattern": "java\\.util\\.zip\\.ZipException: error in opening zip file",
+      "description": "A mod or plugin file is corrupted.",
+      "solution": "Re-download and replace the affected mod/plugin.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 9,
+      "risk": "High",
+      "pattern": "Exception in server tick loop",
+      "description": "The server crashed due to a mod, plugin, or configuration error.",
+      "solution": "Check logs and recent changes for the issue.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 10,
+      "risk": "High",
+      "pattern": "java\\.lang\\.NullPointerException",
+      "description": "A plugin or mod accessed an invalid object.",
+      "solution": "Update or remove the problematic plugin/mod.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 11,
+      "risk": "High",
+      "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
+      "description": "A required mod is missing.",
+      "solution": "Install all required mod dependencies.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 12,
+      "risk": "Medium",
+      "pattern": "java\\.net\\.SocketTimeoutException",
+      "description": "Network issues are causing timeouts.",
+      "solution": "Check the server's network configuration or player's internet connection.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 13,
+      "risk": "High",
+      "pattern": "Cannot bind to port",
+      "description": "The port the server needs is already in use.",
+      "solution": "Ensure no other server or application is using the same port.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 14,
+      "risk": "High",
+      "pattern": "Outdated server! I’m still on .*",
+      "description": "The server version is outdated compared to the client.",
+      "solution": "Update the server to match the client version.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 15,
+      "risk": "High",
+      "pattern": "Outdated client! Please use .*",
+      "description": "The client version is outdated compared to the server.",
+      "solution": "Update the client to match the server version.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 16,
+      "risk": "High",
+      "pattern": "You need to agree to the EULA",
+      "description": "The EULA agreement has not been accepted.",
+      "solution": "Set 'eula=true' in the 'eula.txt' file after reviewing it.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 17,
+      "risk": "High",
+      "pattern": "This crash report has been saved to:",
+      "description": "The server generated a crash report.",
+      "solution": "Check the crash report file for details.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 19,
+      "risk": "High",
+      "pattern": "Failed to verify username!",
+      "description": "Mojang authentication servers may be down, or server settings need adjustment.",
+      "solution": "Check the server.properties file and Mojang status.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 20,
+      "risk": "High",
+      "pattern": "Entity ticking error",
+      "description": "A problematic entity caused the crash.",
+      "solution": "Use MCEdit or similar tools to remove the entity.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 21,
+      "risk": "High",
+      "pattern": "openjdk version \\\"(?<version>[\\d\\.]+)\\\" (?<date>[\\d\\-]+) LTS",
+      "description": "Java version and build date detected.",
+      "solution": "Ensure the required Java version matches the server or modpack requirements.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 22,
+      "risk": "High",
+      "pattern": "Distant Horizons.*encountered an error during the sided_setup event phase",
+      "description": "Error with the Distant Horizons mod during the sided setup event phase. The error occurs because a configGui instance is null, causing a NullPointerException. This results in a server startup failure.",
+      "solution": "Ensure the Distant Horizons mod version is compatible with the server/forge version. Verify if the Distant Horizons mod requires additional libraries or dependencies not included in your modpack. Remove this mod to see if your server will boot.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 23,
+      "risk": "High",
+      "pattern": "Registry entry.*wildernature:[a-z_]+.*was not realized!",
+      "description": "Multiple warnings indicate that Wilder Nature entity types (e.g., wildernature:raccoon) were not realized during the registry phase.",
+      "solution": "Verify that the Wilder Nature mod is compatible with the current Forge and Minecraft versions. Ensure all dependencies for the Wilder Nature mod are present and up to date. Reset the mod’s configuration files in the config/ directory to their defaults. Temporarily disable other mods to test if conflicts prevent Wilder Nature from loading entities properly. Check for updates to Wilder Nature addressing this issue. Report this issue on the mod's support page or issue tracker.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 24,
+      "risk": "Low",
+      "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took \\d+\\.\\d+ seconds.*",
+      "description": "The server detected a hang, where a single server tick took significantly longer than the expected maximum of 0.05 seconds. This indicates minor server lag.",
+      "solution": "You can turn off watchdog by going to - YourServerFolder/server.properties - max-tick-time=-1 - Default is 60000",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 25,
+      "risk": "Low",
+      "pattern": "Server is still starting! Please wait before reconnecting\\.",
+      "description": "A player attempted to connect while the server was still starting.",
+      "solution": "Inform players to wait for the server to fully start before reconnecting.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 26,
+      "risk": "Low",
+      "pattern": "Preparing spawn area: \\d+%",
+      "description": "The server is preparing the spawn area.",
+      "solution": "This is normal during server startup and does not require action.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 27,
+      "risk": "Medium",
+      "pattern": "A new sound was added after the sounds were registered and therefore the new sound could not be added!",
+      "description": "Chance Cubes mod failed to register a new sound after the sound registration phase.",
+      "solution": "Verify that the Chance Cubes mod is compatible with the current version of Minecraft/Forge.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 28,
+      "risk": "Low",
+      "pattern": "Couldn't fully analyze .* free_runners_armored.*missing knowledge for \\{.*\\}",
+      "description": "The Immersive Engineering mod encountered an incomplete analysis for free_runners_armored.",
+      "solution": "Ensure all dependencies for Immersive Engineering are installed and compatible. If the issue persists, report it to the mod developers.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 29,
+      "risk": "High",
+      "pattern": "Could not serialize .*\\(class .*\\) - will not be sent to client!",
+      "description": "A mod or plugin failed to serialize a custom argument type, causing communication issues with the client.",
+      "solution": "Check the logs for details about the specific mod or plugin causing the issue. Ensure it is compatible with the current Minecraft/Forge version.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 30,
+      "risk": "High",
+      "pattern": "net\\.minecraft\\.ReportedException: Ticking block entity",
+      "description": "A block entity caused the server to crash.",
+      "solution": "Use a tool like MCEdit to locate and remove the problematic block entity. Check mod compatibility and update all mods to their latest versions.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 31,
+      "risk": "High",
+      "pattern": "Invalid stack for slot: .*",
+      "description": "A mod (e.g., Mekanism) encountered an invalid stack for a specific inventory slot.",
+      "solution": "Ensure the mod causing the issue is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 31,
+      "risk": "High",
+      "pattern": "Invalid stack for slot: .*\\((?<mod>[a-zA-Z0-9._-]+)\\)",
+      "description": "A mod ('${mod}') encountered an invalid stack for a specific inventory slot.",
+      "solution": "Ensure the mod '${mod}' is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 32,
+      "risk": "High",
+      "pattern": "com\\.google\\.gson\\.JsonSyntaxException: Expected name to be an item, was unknown string '(?<mod>[a-zA-Z0-9_:-]+)'",
+      "description": "A loot table contains an invalid or unknown item in the mod: ${mod}.",
+      "solution": "Verify the loot table configuration for ${mod}. Ensure the specified items exist and are correctly registered.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 33,
+      "risk": "High",
+      "pattern": "java\\.lang\\.IllegalArgumentException: Can't find block (?<mod>[a-zA-Z0-9_:-]+)",
+      "description": "The block referenced in the loot table is missing in the mod: ${mod}.",
+      "solution": "Check if the block exists in the ${mod} mod or verify that the mod version is correct.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 34,
+      "risk": "High",
+      "pattern": "net\\.minecraft\\.world\\.level\\.storage\\.loot\\.LootTables.*Couldn't parse loot table (?<mod>[a-zA-Z0-9_:-]+):blocks/[a-zA-Z0-9_:-]+",
+      "description": "Loot table parsing failed for a block in the mod: ${mod}.",
+      "solution": "Verify the loot table syntax in the ${mod} mod. Ensure the items, blocks, and properties referenced exist.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 35,
+      "risk": "Medium",
+      "pattern": "java\\.util\\.concurrent\\.ForkJoinTask.*",
+      "description": "A concurrency task encountered an error, possibly due to high server load.",
+      "solution": "Reduce the server load or check for problematic tasks in mods or plugins. Consider optimizing server performance.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 36,
+      "risk": "High",
+      "pattern": "dev\\.latvian\\.mods\\.kubejs\\.core\\.LootTablesKJS.*applyKJS0.*",
+      "description": "A loot table in the KubeJS mod failed to apply.",
+      "solution": "Check the KubeJS scripts for syntax or logical errors related to loot tables.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": "37",
+      "risk": "Low",
+      "pattern": "\\[.*?ERROR\\]: Username '(.*?)' tried to join with an invalid session",
+      "description": "A player attempted to join with an invalid session.",
+      "solution": "The session for the player '${1}' is invalid. Ask the player to log out of their Minecraft client and log back in to refresh their session.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    },
+
+    {
+      "id": 38,
+      "risk": "Low",
+      "pattern": "\\[\\s*(?<mod>LuckPerms)\\s*\\] Processing login for (?<username>\\S+) took (?<time>\\d+)ms",
+      "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
+      "solution": "Optimize ${mod} performance by reviewing server load and connection times.",
+      "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+      ],
+      "examples": [
+        "[LuckPerms] No examples given yet..."
+      ],
+      "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+      ],
+      "links": {
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+      }
+    }
+  ]
