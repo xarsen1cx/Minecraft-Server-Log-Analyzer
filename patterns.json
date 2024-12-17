@@ -258,14 +258,7 @@
     "risk": "Minor"
   },
   {
-    "id": "38",
-    "pattern": "\\[.*?ERROR\\]: Stack:\\s+\\n.*?([\\w\\d\\.\\$]+\\.java:\\d+)",
-    "description": "A stack trace was reported during an error.",
-    "solution": "Review the stack trace for the exact source file and line number: '${1}'. The error likely originates from this location.",
-    "risk": "Medium"
-  },
-  {
-  "id": "39",
+  "id": "38",
   "pattern": "\\[.*?WARN\\]: \\[LuckPerms\\] Processing login for (.*?) took (\\d+)ms",
   "description": "LuckPerms login processing for '${1}' took ${2} milliseconds.",
   "solution": "Optimize LuckPerms performance by reviewing server load and connection times.",
