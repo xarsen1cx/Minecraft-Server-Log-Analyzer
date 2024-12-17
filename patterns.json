@@ -259,7 +259,7 @@
   },
   {
     "id": "38",
-    "pattern": "\\[.*?ERROR\\]: Stack:\\s+([\\w\\d\\.\\$]+\\.java:\\d+)",
+    "pattern": "\\[.*?ERROR\\]: Stack:\\s+\\n.*?([\\w\\d\\.\\$]+\\.java:\\d+)",
     "description": "A stack trace was reported during an error.",
     "solution": "Review the stack trace for the exact source file and line number: '${1}'. The error likely originates from this location.",
     "risk": "Medium"
