@@ -263,7 +263,32 @@
     "pattern": "\\[\\s*(?<mod>LuckPerms)\\s*\\]\\s*Processing login for (?<username>\\S+) took (?<time>\\d+)ms",
     "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
     "solution": "Optimize ${mod} performance by reviewing server load and connection times."
-  }
+  },
+  {
+    "id": 39,
+    "risk": "Low",
+    "pattern": "\\[\\s*(?<mod>LuckPerms)\\s*\\] Processing login for (?<username>\\S+) took (?<time>\\d+)ms",
+    "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
+    "solution": "Optimize ${mod} performance by reviewing server load and connection times.",
+    "causes": [
+        "High server load due to concurrent logins",
+        "Slow network response from the client",
+        "Improper server configuration for ${mod}"
+    ],
+    "examples": [
+        "[LuckPerms] Processing login for (?<username>\\S+) took (?<time>\\d+)ms"
+    ],
+    "troubleshooting": [
+        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+        "Review ${mod}'s configuration settings.",
+        "Verify client connections for stability."
+    ],
+    "links": {
+        "Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms"
+    }
+}
+
 ]
 
   
