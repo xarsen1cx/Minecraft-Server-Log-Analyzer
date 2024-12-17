@@ -279,13 +279,15 @@
         "[LuckPerms] Processing login for (?<username>\\S+) took (?<time>\\d+)ms"
     ],
     "troubleshooting": [
+        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
         "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
         "Review ${mod}'s configuration settings.",
         "Verify client connections for stability."
     ],
     "links": {
-        "Documentation": "https://luckperms.net/wiki/Home",
-        "GitHub": "https://github.com/lucko/LuckPerms"
+        "Wiki Documentation": "https://luckperms.net/wiki/Home",
+        "GitHub": "https://github.com/lucko/LuckPerms",
+        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
     }
 }
 
