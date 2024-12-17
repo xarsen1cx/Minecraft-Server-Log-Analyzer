@@ -46,32 +46,24 @@
         "Plugin Troubleshooting": "https://www.spigotmc.org/forums/spigot-plugin-help.42/"
       }
     },
-
+    
     {
       "id": 3,
       "risk": "High",
       "pattern": "ItemLocksFabric",
-      "description": "The ItemLocksFabric mod might be client-side only.",
-      "solution": "Remove the ItemLocksFabric mod from your server.",
+      "description": "The ItemLocksFabric ItemLock is purely client-side and does not work on servers.",
+      "solution": "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder.",
       "causes": [
         "High server load due to concurrent logins",
         "Slow network response from the client",
         "Improper server configuration for ${mod}"
       ],
       "examples": [
-        "[LuckPerms] No examples given yet..."
+        "[ItemLocksFabric] No examples given yet..."
       ],
       "troubleshooting": [
-        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
-        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
-        "Review ${mod}'s configuration settings.",
-        "Verify client connections for stability."
-      ],
-      "links": {
-        "Wiki Documentation": "https://luckperms.net/wiki/Home",
-        "GitHub": "https://github.com/lucko/LuckPerms",
-        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
-      }
+        "Itemlock mod is client-side only and does not work on servers."
+      ]
     },
 
     {
