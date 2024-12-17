@@ -251,11 +251,11 @@
     "solution": "Check the KubeJS scripts for syntax or logical errors related to loot tables."
   },
   {
-  "id": "37",
-  "pattern": "\\[.*?ERROR\\]: Username '(.*?)' tried to join with an invalid session",
-  "description": "A player attempted to join with an invalid session.",
-  "solution": "The session for the player '${1}' is invalid. Ask the player to log out of their Minecraft client and log back in to refresh their session.",
-  "risk": "Minor"
+    "id": "37",
+    "pattern": "\\[.*?ERROR\\]: Username '(.*?)' tried to join with an invalid session",
+    "description": "A player attempted to join with an invalid session.",
+    "solution": "The session for the player '${1}' is invalid. Ask the player to log out of their Minecraft client and log back in to refresh their session.",
+    "risk": "Minor"
   },
   {
   "id": "38",
