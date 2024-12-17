@@ -269,7 +269,7 @@
         "Improper server configuration for ${mod}"
     ],
     "examples": [
-        "[LuckPerms] Processing login for (?<username>\\S+) took (?<time>\\d+)ms"
+        "[LuckPerms] No examples given yet..."
     ],
     "troubleshooting": [
         "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
