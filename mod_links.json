@@ -13,6 +13,7 @@
   },
   "LuckPerms": {
     "GitHub": "https://github.com/LuckPerms/LuckPerms/issues",
-    "wiki": "https://luckperms.net/wiki/Home"
+    "wiki": "https://luckperms.net/wiki/Home",
+    "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
   }
 }
