@@ -258,11 +258,11 @@
     "risk": "Minor"
   },
   {
-    "id": 38,
-    "risk": "Low",
-    "pattern": "\\[(?<mod>LuckPerms)] Processing login for '(?<username>.*?)' took (?<time>\\d+)ms",
-    "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
-    "solution": "Optimize ${mod} performance by reviewing server load and connection times."
+      "id": 38,
+      "risk": "Low",
+      "pattern": "\\[(?<mod>LuckPerms)] Processing login for '(?<username>.*?)' took (?<time>\\d+)ms",
+      "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
+      "solution": "Optimize ${mod} performance by reviewing server load and connection times."
   }
 ]
 
