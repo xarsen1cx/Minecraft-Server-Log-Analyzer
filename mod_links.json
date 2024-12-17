@@ -15,5 +15,8 @@
     "GitHub": "https://github.com/LuckPerms/LuckPerms/issues",
     "wiki": "https://luckperms.net/wiki/Home",
     "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+  },
+  "ItemLocksFabric": {
+    "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
   }
 }
