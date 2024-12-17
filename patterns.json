@@ -258,7 +258,7 @@
     "risk": "Minor"
   },
   {
-    "id": 39,
+    "id": 38,
     "risk": "Low",
     "pattern": "\\[\\s*(?<mod>LuckPerms)\\s*\\] Processing login for (?<username>\\S+) took (?<time>\\d+)ms",
     "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
