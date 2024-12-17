@@ -50,7 +50,7 @@
     {
       "id": 3,
       "risk": "High",
-      "pattern": "ItemLocksFabric",
+      "pattern": "(?<mod>ItemLocksFabric)",
       "description": "The ItemLocksFabric ItemLock is purely client-side and does not work on servers.",
       "solution": "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder.",
       "causes": [
@@ -62,7 +62,10 @@
       "troubleshooting": [
         "Itemlock mod is client-side only and does not work on servers.",
         "Remove from your server mods folder"
-      ]
+      ],
+      "links": {
+        "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
+      }
     },
 
     {
