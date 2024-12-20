@@ -2,6 +2,7 @@ Creating a minecraft error trace app that auto detects errors from your Logs / C
 
 
 update: 2024-12-20 - added in a drop down menu to select versions and modloader your using, if your missing a mod from the 'Trace log' it will suggest links to download.
+
 ![image](https://github.com/user-attachments/assets/443866a6-6408-4b25-aa74-a24ca3a276bd)
 
 ---
