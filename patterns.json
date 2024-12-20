@@ -930,10 +930,10 @@
     {
       "id": 45,
       "risk": "High",
-      "modName": "${missing_mod}",
       "pattern": "Missing required mod: (?<missing_mod>.+)",
       "description": "A required mod, ${missing_mod}, is missing from the server configuration.",
       "solution": "Ensure the mod \"${missing_mod}\" is installed and loaded.",
+      "modName": "${missing_mod}",
       "causes": [
         "The required mod is not present in the `mods/` folder.",
         "The mod version is incompatible with the server version."
