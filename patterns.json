@@ -939,8 +939,8 @@
         "The mod version is incompatible with the server version."
       ],
       "examples": [
-        "[ERROR]: Missing required mod: forge",
-        "[ERROR]: Missing required mod: optifine",
+        "[ERROR]: Missing required mod: Mouse Tweaks",
+        "[ERROR]: Missing required mod: JourneyMap",
         "[ERROR]: Missing required mod: Just Enough Items (JEI)"
       ],
       "troubleshooting": [
@@ -949,7 +949,8 @@
         "Download the missing mod from a trusted source (e.g., CurseForge)."
       ],
       "links": {
-        "CurseForge": "https://www.curseforge.com/"
+        "CurseForge": "https://www.curseforge.com/",
+        "Feed The Beast - ModPacks": "https://www.feed-the-beast.com/modpacks?sort=featured"
       }
     }
 
