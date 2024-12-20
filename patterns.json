@@ -931,8 +931,8 @@
       "id": 45,
       "risk": "High",
       "pattern": "Missing required mod: (?<missing_mod>.+)",
-      "description": "A required mod is missing from the server configuration.",
-      "solution": "Ensure the mod `<missing_mod>` is installed and loaded.",
+      "description": "A required mod, ${missing_mod}, is missing from the server configuration.",
+      "solution": "Ensure the mod \"${missing_mod}\" is installed and loaded.",
       "modName": "${missing_mod}",
       "causes": [
         "The required mod is not present in the `mods/` folder.",
