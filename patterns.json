@@ -115,7 +115,7 @@
 
     {
       "id": 6,
-      "risk": "High",
+      "risk": "Medium",
       "pattern": "java\\.io\\.FileNotFoundException:.*",
       "description": "A required file is missing or corrupted.",
       "solution": "Verify your modpack or server files.",
