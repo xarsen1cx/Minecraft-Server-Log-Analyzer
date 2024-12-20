@@ -815,7 +815,75 @@
       "links": {
         "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
       }
-    }
+    },
+      {
+        "id": 40,
+        "risk": "High",
+        "pattern": "java\\.lang\\.RuntimeException: Tried to read NBT tag with too high complexity, depth > [0-9]+",
+        "description": "A corrupted or excessively nested NBT structure is causing the save file or world data to be unreadable.",
+        "solution": "Use an NBT editor (e.g., NBTExplorer) to identify and remove the problematic NBT data. Restore the world from a backup if available.",
+        "causes": [
+          "A mod stored infinitely nested or malformed NBT data.",
+          "Corrupted world data due to a crash or forced shutdown.",
+          "Incompatible mods writing invalid NBT entries."
+        ],
+        "examples": [
+          "java.lang.RuntimeException: Tried to read NBT tag with too high complexity, depth > 512"
+        ],
+        "troubleshooting": [
+          "Open the world files with NBTExplorer to locate and fix the offending data.",
+          "Temporarily remove recently added mods to isolate which one created the invalid data.",
+          "Restore from a known good backup of the world."
+        ],
+        "links": {
+          "NBTExplorer": "https://github.com/jaquadro/NBTExplorer"
+      }
+    },
+      {
+        "id": 41,
+        "risk": "Medium",
+        "pattern": "Can't keep up! Is the server overloaded\\? Running [0-9]+ms or [0-9]+ ticks behind",
+        "description": "The server is experiencing lag and cannot process ticks at the expected rate.",
+        "solution": "Optimize server performance by allocating more RAM, reducing the number of mods/plugins, or upgrading hardware.",
+        "causes": [
+          "Insufficient RAM or CPU resources.",
+          "Too many entities, mods, or complex redstone contraptions.",
+          "Heavy chunk loading or world generation."
+        ],
+        "examples": [
+          "Can't keep up! Is the server overloaded? Running 2199ms or 43 ticks behind"
+        ],
+        "troubleshooting": [
+          "Allocate more RAM to the server.",
+          "Remove or limit heavy mods and resource-intensive builds.",
+          "Optimize server settings (e.g., view distance).",
+          "Check server hardware performance."
+        ],
+        "links": {
+          "Server Optimization Tips": "https://minecraft.fandom.com/wiki/Tutorials/Improving_frame_rate"
+      }
+    },
+      {
+        "id": 42,
+        "risk": "Low",
+        "pattern": "defineId called for: class net\\.minecraft\\.world\\.entity\\.TamableAnimal from interface dev\\.muon\\.medievalorigins\\.entity\\.IFollowingSummon",
+        "description": "A mod-related warning indicating data ID definition for a tamable animal entity that follows a summon interface.",
+        "solution": "Check if the Medieval Origins mod is up-to-date and compatible with the current Minecraft/Forge version. This is generally a harmless warning.",
+        "causes": [
+          "The mod 'Medieval Origins' or a related entity mod may be registering entities in an unusual way."
+        ],
+        "examples": [
+          "defineId called for: class net.minecraft.world.entity.TamableAnimal from interface dev.muon.medievalorigins.entity.IFollowingSummon"
+        ],
+        "troubleshooting": [
+          "Update or verify the Medieval Origins mod version.",
+          "Check the mod's issue tracker for similar warnings."
+        ],
+        "links": {
+          "Medieval Origins Mod": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins"
+      }
+    },
+  
   ]
 
   
