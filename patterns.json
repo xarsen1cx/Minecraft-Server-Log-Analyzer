@@ -890,7 +890,7 @@
     {
       "id": 43,
       "risk": "Medium",
-      "pattern": "openjdk version \\\"(?<java_version>[\\d\\.]+)\\\"",
+      "pattern": "openjdk version \\\"(?<java_version>[\\d\\.]+_[\\d]+)\\\"",
       "description": "Detected Java version.",
       "solution": "Ensure the Java version matches the server or modpack requirements.",
       "causes": [
@@ -926,6 +926,7 @@
         "Not yet added...": "Not yet added..."
       }
     },
+    
     {
       "id": 45,
       "risk": "High",
