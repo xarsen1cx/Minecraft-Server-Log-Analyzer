@@ -882,6 +882,25 @@
         "links": {
           "Medieval Origins Mod": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins"
       }
+    },
+    {
+      "id": 43,
+      "risk": "Medium",
+      "pattern": "openjdk version \\\"(?<java_version>[\\d\\.]+)\\\"",
+      "description": "Detected Java version.",
+      "solution": "Ensure the Java version matches the server or modpack requirements."
+      "causes": [
+        "Not yet added..."
+      ],
+      "examples": [
+        "Not yet added..."
+      ],
+      "troubleshooting": [
+        "Not yet added..."
+      ],
+      "links": {
+        "Not yet added...": "Not yet added..."
+      }
     }
   
   ]
