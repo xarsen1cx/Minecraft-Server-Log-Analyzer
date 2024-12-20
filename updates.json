@@ -1,4 +1,5 @@
 [
+    { "date": "2024-12-20", "update": "Added- When a log is missing a mod, it will suggest links depending on the version and modloader you selected."},
     { "date": "2024-12-20", "update": "Added more Trace errors, fix some back-end issues, added to FAQ"},
     { "date": "2024-12-19", "update": "Fixed back-end to handle huge trace logs."},
     { "date": "2024-12-18", "update": "Changes to UI, and new pages e.g: learn."},
