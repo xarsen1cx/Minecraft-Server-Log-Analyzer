@@ -929,7 +929,7 @@
     {
       "id": 45,
       "risk": "High",
-      "pattern": "Missing required mod: (?<missing_mod>[a-zA-Z0-9_\\-]+)",
+      "pattern": "Missing required mod: (?<missing_mod>.+)",
       "description": "A required mod is missing from the server configuration.",
       "solution": "Ensure the mod `<missing_mod>` is installed and loaded.",
       "causes": [
@@ -938,7 +938,8 @@
       ],
       "examples": [
         "[ERROR]: Missing required mod: forge",
-        "[ERROR]: Missing required mod: optifine"
+        "[ERROR]: Missing required mod: optifine",
+        "[ERROR]: Missing required mod: Just Enough Items (JEI)"
       ],
       "troubleshooting": [
         "Check the `mods/` folder to ensure the mod is installed.",
@@ -947,9 +948,8 @@
       ],
       "links": {
         "CurseForge": "https://www.curseforge.com/"
+      }
     }
-  }
-
   
   ]
 
