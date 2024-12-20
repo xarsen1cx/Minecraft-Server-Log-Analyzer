@@ -901,6 +901,25 @@
       "links": {
         "Not yet added...": "Not yet added..."
       }
+    },
+    {
+      "id": 44,
+      "risk": "Medium",
+      "pattern": "Minecraft version: (?<mc_version>[0-9\\.]+)",
+      "description": "Detected Minecraft version from logs.",
+      "solution": "Ensure mods are compatible with this version."
+      "causes": [
+        "Not yet added..."
+      ],
+      "examples": [
+        "Not yet added..."
+      ],
+      "troubleshooting": [
+        "Not yet added..."
+      ],
+      "links": {
+        "Not yet added...": "Not yet added..."
+      }
     }
   
   ]
