@@ -892,7 +892,7 @@
       "risk": "Medium",
       "pattern": "openjdk version \\\"(?<java_version>[\\d\\.]+)\\\"",
       "description": "Detected Java version.",
-      "solution": "Ensure the Java version matches the server or modpack requirements."
+      "solution": "Ensure the Java version matches the server or modpack requirements.",
       "causes": [
         "Not yet added..."
       ],
@@ -912,7 +912,7 @@
       "risk": "Medium",
       "pattern": "Minecraft version: (?<mc_version>[0-9\\.]+)",
       "description": "Detected Minecraft version from logs.",
-      "solution": "Ensure mods are compatible with this version."
+      "solution": "Ensure mods are compatible with this version.",
       "causes": [
         "Not yet added..."
       ],
