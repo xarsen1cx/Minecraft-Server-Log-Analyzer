@@ -957,7 +957,126 @@
         "CurseForge": "https://www.curseforge.com/",
         "Feed The Beast - ModPacks": "https://www.feed-the-beast.com/modpacks?sort=featured"
       }
-    }
+    },
+
+    {
+    "id": 46,
+    "risk": "High",
+    "pattern": "java\\.lang\\.ClassNotFoundException: (?<class>[a-zA-Z0-9.]+)",
+    "description": "A required class (${class}) could not be found, likely due to a missing or incompatible mod.",
+    "solution": "Ensure all mods are installed and compatible with the current Forge version. Check if the required mod is missing or outdated.",
+    "causes": [
+      "A mod dependency is missing.",
+      "The mod is not compatible with the Minecraft or Forge version.",
+      "The mod file is corrupted."
+  ],
+    "examples": [
+      "java.lang.ClassNotFoundException: dev.shadowsoffire.apotheosis.ench.table.ApothEnchantmentMenu",
+      "java.lang.ClassNotFoundException: fuzs.visualworkbench.world.inventory.ModCraftingMenu"
+  ],
+    "troubleshooting": [
+      "Check the mod's documentation for required dependencies.",
+      "Ensure all mods are compatible with the Minecraft and Forge versions.",
+      "Re-download the mod files and verify their integrity."
+  ],
+    "links": {
+      "Forge Modding Guide": "https://mcforge.readthedocs.io/en/latest/",
+      "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+  }
+},
+{
+  "id": 47,
+  "risk": "High",
+  "pattern": "@Mixin target (?<class>[a-zA-Z0-9.]+) was not found",
+  "description": "A mixin class (${class}) required by a mod is missing, indicating a compatibility or configuration issue.",
+  "solution": "Check if the mod and its dependencies are compatible with the current Forge and Minecraft versions.",
+  "causes": [
+    "A required mod is missing or outdated.",
+    "The mod version is incompatible with the Minecraft version.",
+    "A configuration issue in the mod."
+  ],
+  "examples": [
+    "@Mixin target dev.shadowsoffire.apotheosis.ench.table.ApothEnchantmentMenu was not found",
+    "@Mixin target tfar.davespotioneering.blockentity.AdvancedBrewingStandBlockEntity was not found"
+  ],
+  "troubleshooting": [
+    "Verify that all required mods are installed and up-to-date.",
+    "Check the mod's documentation for compatibility notes.",
+    "Disable the mod temporarily to identify conflicts."
+  ],
+  "links": {
+    "Mixin Documentation": "https://github.com/SpongePowered/Mixin",
+    "Forge Mod Troubleshooting": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+  }
+},
+{
+  "id": 48,
+  "risk": "High",
+  "pattern": "Reference map '(?<file>[a-zA-Z0-9.-]+)' for (?<mixin>[a-zA-Z0-9.-]+) could not be read",
+  "description": "The reference map file (${file}) for a mod mixin (${mixin}) could not be loaded.",
+  "solution": "Ensure the mod is installed correctly and compatible with the current Forge version. Re-download the mod if necessary.",
+  "causes": [
+    "The reference map file is missing or corrupted.",
+    "The mod is not compatible with the Minecraft version.",
+    "A dependency for the mod is missing."
+  ],
+  "examples": [
+    "Reference map 'handcrafted-forge-1.20.1-forge-refmap.json' for handcrafted.mixins.json could not be read"
+  ],
+  "troubleshooting": [
+    "Check if the required dependencies for the mod are installed.",
+    "Re-download and replace the mod file.",
+    "Verify the mod's compatibility with the Forge and Minecraft versions."
+  ],
+  "links": {
+    "Forge Mod Installation Guide": "https://www.curseforge.com/minecraft/mc-mods"
+  }
+},
+{
+  "id": 49,
+  "risk": "High",
+  "pattern": "Attempted to select two dependency jars from JarJar which have the same identification",
+  "description": "Two dependency JAR files have the same identifier, causing a conflict.",
+  "solution": "Remove one of the conflicting JAR files or check for mod updates to resolve the conflict.",
+  "causes": [
+    "Duplicate mod files in the mods folder.",
+    "Conflicting dependencies from different mods."
+  ],
+  "examples": [
+    "Attempted to select two dependency jars from JarJar which have the same identification"
+  ],
+  "troubleshooting": [
+    "Check the mods folder for duplicate files and remove them.",
+    "Update all mods to their latest versions.",
+    "Test with a minimal set of mods to isolate the issue."
+  ],
+  "links": {
+    "Forge Modding Issues": "https://mcforge.readthedocs.io/en/latest/"
+  }
+},
+{
+  "id": 50,
+  "risk": "Medium",
+  "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
+  "description": "One or more required mods are missing, preventing the server from starting.",
+  "solution": "Install the missing mods as listed in the logs and ensure all dependencies are satisfied.",
+  "causes": [
+    "The mod is not present in the mods folder.",
+    "The mod is incompatible with the Forge version."
+  ],
+  "examples": [
+    "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)"
+  ],
+  "troubleshooting": [
+    "Check the mod's documentation for dependencies.",
+    "Download and add the missing mods to the mods folder.",
+    "Ensure all mods are compatible with the Minecraft and Forge versions."
+  ],
+  "links": {
+    "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+  }
+}
+
 
   
   ]
