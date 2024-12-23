@@ -984,99 +984,278 @@
       "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
   }
 },
-{
-  "id": 47,
-  "risk": "High",
-  "pattern": "@Mixin target (?<class>[a-zA-Z0-9.]+) was not found",
-  "description": "A mixin class (${class}) required by a mod is missing, indicating a compatibility or configuration issue.",
-  "solution": "Check if the mod and its dependencies are compatible with the current Forge and Minecraft versions.",
-  "causes": [
-    "A required mod is missing or outdated.",
-    "The mod version is incompatible with the Minecraft version.",
-    "A configuration issue in the mod."
+  {
+    "id": 47,
+    "risk": "High",
+    "pattern": "@Mixin target (?<class>[a-zA-Z0-9.]+) was not found",
+    "description": "A mixin class (${class}) required by a mod is missing, indicating a compatibility or configuration issue.",
+    "solution": "Check if the mod and its dependencies are compatible with the current Forge and Minecraft versions.",
+    "causes": [
+      "A required mod is missing or outdated.",
+      "The mod version is incompatible with the Minecraft version.",
+      "A configuration issue in the mod."
+    ],
+    "examples": [
+      "@Mixin target dev.shadowsoffire.apotheosis.ench.table.ApothEnchantmentMenu was not found",
+      "@Mixin target tfar.davespotioneering.blockentity.AdvancedBrewingStandBlockEntity was not found"
+    ],
+    "troubleshooting": [
+      "Verify that all required mods are installed and up-to-date.",
+      "Check the mod's documentation for compatibility notes.",
+      "Disable the mod temporarily to identify conflicts."
+    ],
+    "links": {
+      "Mixin Documentation": "https://github.com/SpongePowered/Mixin",
+      "Forge Mod Troubleshooting": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+    }
+  },
+  {
+    "id": 48,
+    "risk": "High",
+    "pattern": "Reference map '(?<file>[a-zA-Z0-9.-]+)' for (?<mixin>[a-zA-Z0-9.-]+) could not be read",
+    "description": "The reference map file (${file}) for a mod mixin (${mixin}) could not be loaded.",
+    "solution": "Ensure the mod is installed correctly and compatible with the current Forge version. Re-download the mod if necessary.",
+    "causes": [
+      "The reference map file is missing or corrupted.",
+      "The mod is not compatible with the Minecraft version.",
+      "A dependency for the mod is missing."
+    ],
+    "examples": [
+      "Reference map 'handcrafted-forge-1.20.1-forge-refmap.json' for handcrafted.mixins.json could not be read"
+    ],
+    "troubleshooting": [
+      "Check if the required dependencies for the mod are installed.",
+      "Re-download and replace the mod file.",
+      "Verify the mod's compatibility with the Forge and Minecraft versions."
+    ],
+    "links": {
+      "Forge Mod Installation Guide": "https://www.curseforge.com/minecraft/mc-mods"
+    }
+  },
+  {
+    "id": 49,
+    "risk": "High",
+    "pattern": "Attempted to select two dependency jars from JarJar which have the same identification",
+    "description": "Two dependency JAR files have the same identifier, causing a conflict.",
+    "solution": "Remove one of the conflicting JAR files or check for mod updates to resolve the conflict.",
+    "causes": [
+      "Duplicate mod files in the mods folder.",
+      "Conflicting dependencies from different mods."
+    ],
+    "examples": [
+      "Attempted to select two dependency jars from JarJar which have the same identification"
+    ],
+    "troubleshooting": [
+      "Check the mods folder for duplicate files and remove them.",
+      "Update all mods to their latest versions.",
+      "Test with a minimal set of mods to isolate the issue."
+    ],
+    "links": {
+      "Forge Modding Issues": "https://mcforge.readthedocs.io/en/latest/"
+    }
+  },
+    
+    {
+    "id": 50,
+    "risk": "Medium",
+    "pattern": "Missing Mods.*: required:.*",
+    "description": "One or more required mods are missing, preventing the server from starting.",
+    "solution": "Install the missing mods as listed in the logs and ensure all dependencies are satisfied.",
+    "causes": [
+      "The mod is not present in the mods folder.",
+      "The mod is incompatible with the Forge version."
+    ],
+      "examples": [
+        "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)",
+        "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: [mod_name]@[version_range]"
+    ],
+      "troubleshooting": [
+        "Check the mod's documentation for dependencies.",
+        "Download and add the missing mods to the mods folder.",
+        "Ensure all mods are compatible with the Minecraft and Forge versions."
+    ],
+      "links": {
+        "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+    }
+  },
+    
+    {
+      "id": 51,
+      "risk": "Medium",
+      "pattern": "java\\.util\\.MissingResourceException: Missing font: ([\\w\\-\\.]+\\.ttf)",
+      "description": "The game or a mod is attempting to load a missing font file, causing a crash.",
+      "solution": "Ensure the required font file is present in the mod's assets folder or reinstall the mod to recover missing resources.",
+      "causes": [
+        "Corrupted or incomplete mod installation.",
+        "The required font file was removed or misplaced."
   ],
-  "examples": [
-    "@Mixin target dev.shadowsoffire.apotheosis.ench.table.ApothEnchantmentMenu was not found",
-    "@Mixin target tfar.davespotioneering.blockentity.AdvancedBrewingStandBlockEntity was not found"
+      "examples": [
+        "java.util.MissingResourceException: Missing font: inter-medium.ttf"
   ],
-  "troubleshooting": [
-    "Verify that all required mods are installed and up-to-date.",
-    "Check the mod's documentation for compatibility notes.",
-    "Disable the mod temporarily to identify conflicts."
+    "troubleshooting": [
+      "Verify that the font file (e.g., inter-medium.ttf) is present in the mod's resource directory.",
+      "Re-download and reinstall the mod to ensure all resources are intact.",
+      "Check if the mod is compatible with the current Minecraft and Forge versions."
   ],
-  "links": {
-    "Mixin Documentation": "https://github.com/SpongePowered/Mixin",
-    "Forge Mod Troubleshooting": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+    "links": {
+      "Axiom Mod GitHub": "https://github.com/Moulberry/Axiom/issues"
   }
 },
-{
-  "id": 48,
-  "risk": "High",
-  "pattern": "Reference map '(?<file>[a-zA-Z0-9.-]+)' for (?<mixin>[a-zA-Z0-9.-]+) could not be read",
-  "description": "The reference map file (${file}) for a mod mixin (${mixin}) could not be loaded.",
-  "solution": "Ensure the mod is installed correctly and compatible with the current Forge version. Re-download the mod if necessary.",
-  "causes": [
-    "The reference map file is missing or corrupted.",
-    "The mod is not compatible with the Minecraft version.",
-    "A dependency for the mod is missing."
+    {
+    "id": 52,
+    "risk": "Low",
+    "pattern": "SINYTRA CONNECTOR IS PRESENT!.*https:\\/\\/github\\.com\\/Sinytra\\/Connector\\/issues",
+    "description": "The Connector mod is installed and might be causing compatibility issues.",
+    "solution": "Verify the issue with the Connector mod's issue tracker and temporarily remove it to test for conflicts.",
+    "causes": [
+      "Compatibility issues between Connector and other mods.",
+      "Unexpected behavior introduced by the Connector mod."
   ],
-  "examples": [
-    "Reference map 'handcrafted-forge-1.20.1-forge-refmap.json' for handcrafted.mixins.json could not be read"
+    "examples": [
+      "SINYTRA CONNECTOR IS PRESENT!",
+      "Please verify issues are not caused by Connector before reporting them to mod authors."
   ],
-  "troubleshooting": [
-    "Check if the required dependencies for the mod are installed.",
-    "Re-download and replace the mod file.",
-    "Verify the mod's compatibility with the Forge and Minecraft versions."
+    "troubleshooting": [
+      "Disable the Connector mod and test if the issue persists.",
+      "Review the Connector mod's issue tracker for similar problems and potential fixes.",
+      "Ensure all mods are updated to their latest compatible versions."
   ],
-  "links": {
-    "Forge Mod Installation Guide": "https://www.curseforge.com/minecraft/mc-mods"
+    "links": {
+      "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues"
   }
 },
-{
-  "id": 49,
-  "risk": "High",
-  "pattern": "Attempted to select two dependency jars from JarJar which have the same identification",
-  "description": "Two dependency JAR files have the same identifier, causing a conflict.",
-  "solution": "Remove one of the conflicting JAR files or check for mod updates to resolve the conflict.",
-  "causes": [
-    "Duplicate mod files in the mods folder.",
-    "Conflicting dependencies from different mods."
+    
+    {
+    "id": 53,
+    "risk": "High",
+    "pattern": "at com\\.moulberry\\.axiom\\..*java\\.lang\\.reflect\\.InvocationTargetException",
+    "description": "The Axiom mod encountered a Java-related error during initialization.",
+    "solution": "Check the required Java version for the mod. Axiom may not be fully compatible with Java 17.",
+    "causes": [
+      "Running the mod on an unsupported Java version (e.g., 17 instead of 8).",
+      "Corrupted Axiom mod files or incompatible Forge/Minecraft versions."
   ],
-  "examples": [
-    "Attempted to select two dependency jars from JarJar which have the same identification"
+    "examples": [
+      "at com.moulberry.axiom.editor.EditorUI.loadFont",
+      "java.lang.reflect.InvocationTargetException"
   ],
-  "troubleshooting": [
-    "Check the mods folder for duplicate files and remove them.",
-    "Update all mods to their latest versions.",
-    "Test with a minimal set of mods to isolate the issue."
+    "troubleshooting": [
+      "Verify the required Java version for the mod (often Java 8 or 11).",
+      "Switch to the appropriate Java version and restart the server.",
+      "Ensure the Axiom mod is compatible with the current Minecraft version."
   ],
-  "links": {
-    "Forge Modding Issues": "https://mcforge.readthedocs.io/en/latest/"
+    "links": {
+      "Axiom GitHub": "https://github.com/Moulberry/Axiom"
   }
 },
-{
-  "id": 50,
-  "risk": "Medium",
-  "pattern": "Missing Mods.*: required:.*",
-  "description": "One or more required mods are missing, preventing the server from starting.",
-  "solution": "Install the missing mods as listed in the logs and ensure all dependencies are satisfied.",
-  "causes": [
-    "The mod is not present in the mods folder.",
-    "The mod is incompatible with the Forge version."
+
+    {
+    "id": 54,
+    "risk": "Critical",
+    "pattern": "ModLauncher services:.*Exception.*",
+    "description": "A crash occurred in the ModLauncher during initialization, likely caused by a mod conflict or incomplete installation.",
+    "solution": "Check the mod list for compatibility issues and remove problematic mods.",
+    "causes": [
+      "Incompatible mods loaded together.",
+      "Mod dependencies are missing or outdated."
   ],
-  "examples": [
-    "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)",
-    "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: [mod_name]@[version_range]"
+    "examples": [
+      "ModLauncher launch target: forgeclient",
+      "at cpw.mods.modlauncher.Launcher.main(Launcher.java:78)"
   ],
-  "troubleshooting": [
-    "Check the mod's documentation for dependencies.",
-    "Download and add the missing mods to the mods folder.",
-    "Ensure all mods are compatible with the Minecraft and Forge versions."
+    "troubleshooting": [
+      "Review the list of installed mods and their versions for conflicts.",
+      "Ensure all mods are compatible with the current Minecraft and Forge versions.",
+      "Temporarily remove suspect mods to identify the source of the crash."
   ],
-  "links": {
-    "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+    "links": {
+      "Forge Mod Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/",
+      "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+  }
+},
+
+  {
+    "id": 55,
+    "risk": "Medium",
+    "pattern": "at com\\.moulberry\\.axiom\\.editor\\.EditorUI\\..*loadFont",
+    "description": "Axiom mod failed to load the specified font during initialization.",
+    "solution": "Ensure the font file is present and reinstall the mod if necessary.",
+    "causes": [
+      "Missing or misplaced font file in the mod's resources.",
+      "Corrupted mod files or incompatible Forge version."
+  ],
+    "examples": [
+      "com.moulberry.axiom.editor.EditorUI.loadFont(EditorUI.java:326)"
+  ],
+    "troubleshooting": [
+      "Check for missing font files in the mod's directory.",
+      "Reinstall the mod to ensure all files are intact.",
+      "Verify the mod's compatibility with your Forge and Minecraft versions."
+  ],
+    "links": {
+      "Axiom Mod Support": "https://github.com/Moulberry/Axiom/issues"
+  }
+},
+
+    {
+    "id": 56,
+    "risk": "High",
+    "pattern": "([\\w\\-\\.]+\\.jar)\\s+\\|([\\w\\s]+)\\s+\\|([\\w\\_]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: NOSIGNATURE",
+    "description": "A mod failed to load due to missing or invalid signature, or compatibility issues.",
+    "solution": "Ensure the mod is downloaded from a trusted source, and verify its compatibility with the Forge and Minecraft versions.",
+    "causes": [
+      "The mod is corrupted or tampered with.",
+      "The mod does not support the current Forge or Minecraft version.",
+      "Missing required dependencies for the mod."
+  ],
+    "examples": [
+      "Create_Questing-FORGE-1.20.1-1.0.0.jar            |Create Questing               |create_questing               |1.0.0               |ERROR     |Manifest: NOSIGNATURE"
+  ],
+    "troubleshooting": [
+      "Re-download the mod from its official source.",
+      "Ensure the mod's version matches the current Forge and Minecraft versions.",
+      "Check for missing dependencies listed on the mod's documentation page.",
+      "Look for alternative versions or updates that might address the issue."
+  ],
+    "links": {
+      "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods",
+      "Forge Mod Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+  }
+},
+
+    {
+    "id": 57,
+    "risk": "High",
+    "pattern": "(\\S+\\.jar)\\s+\\|([^\\|]+)\\s+\\|([^\\|]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: ([^\\s]+)",
+    "description": "A mod encountered an error during loading, potentially due to missing or invalid signatures, or compatibility issues.",
+    "solution": "Verify the mod's source, ensure compatibility with the current Forge and Minecraft versions, and check for dependencies.",
+    "causes": [
+      "The mod is corrupted or tampered with.",
+      "The mod is incompatible with the current Forge or Minecraft version.",
+      "The mod lacks a valid signature.",
+      "Required dependencies for the mod are missing."
+  ],
+    "examples": [
+      "Create_Questing-FORGE-1.20.1-1.0.0.jar            |Create Questing               |create_questing               |1.0.0               |ERROR     |Manifest: NOSIGNATURE",
+      "AwesomeMod-1.16.5-2.3.4.jar                      |Awesome Mod                  |awesome_mod                  |2.3.4               |ERROR     |Manifest: INVALID",
+      "ExampleMod-2.0.0-alpha.jar                       |Example Mod                  |example_mod                  |2.0.0-alpha         |ERROR     |Manifest: MISSING"
+  ],
+    "troubleshooting": [
+      "Re-download the mod from an official or trusted source.",
+      "Ensure all required dependencies are installed.",
+      "Check compatibility with your current Forge and Minecraft versions.",
+      "Look for updates or alternative versions of the mod.",
+    "Disable the problematic mod to test if the error resolves."
+  ],
+    "links": {
+      "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods",
+      "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/"
   }
 }
+
+
+
+
 ]
 
   
