@@ -2,7 +2,7 @@
     {
       "id": 1,
       "risk": "High",
-      "pattern": "java.net.ConnectException: Connection refused",
+      "pattern": "java\\.net\\.ConnectException: Connection refused",
       "description": "This error occurs when the server cannot be reached.",
       "solution": "Check if the server is running and reachable.",
       "causes": [
