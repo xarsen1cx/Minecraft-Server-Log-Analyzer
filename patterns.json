@@ -96,20 +96,25 @@
     {
       "id": 5,
       "risk": "High",
-      "pattern": "java\\.lang\\.ClassCastException.*jdk\\.internal\\.loader",
+      "pattern": "java\\.lang\\.ClassCastException: class (?<sourceClass>[a-zA-Z0-9.$_]+) cannot be cast to class (?<targetClass>[a-zA-Z0-9.$_]+)",
       "description": "An incompatible class cast was attempted.",
       "solution": "Check for plugin/mod compatibility or update your Java version.",
       "causes": [
-        "No examples given yet..."
+        "The source class '${sourceClass}' is not compatible with the target class '${targetClass}'.",
+        "Incompatible Java version or mod/plugin configuration."
       ],
       "examples": [
-        "No examples given yet..."
+        "java.lang.ClassCastException: class jdk.internal.loader.ClassLoaders$AppClassLoader cannot be cast to class java.net.URLClassLoader"
       ],
       "troubleshooting": [
-        "No examples given yet..."
+        "Verify that the mods/plugins being used are compatible with the server's Java version.",
+        "Update to a supported Java runtime version.",
+        "Ensure no conflicting class loaders are being used by mods/plugins."
       ],
       "links": {
-        "none": "none"
+        "Java Documentation": "https://docs.oracle.com/javase/8/docs/api/",
+        "Forge Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/",
+        "Which Version of Java for your Minecraft Version": "https://cybrancee.com/learn/knowledge-base/which-version-of-java-for-your-minecraft-version/"
       }
     },
 
