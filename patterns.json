@@ -1121,7 +1121,8 @@
       "Ensure all mods are updated to their latest compatible versions."
   ],
     "links": {
-      "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues"
+      "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues",
+      "Github link": "https://github.com/Sinytra/Connector"
   }
 },
     
@@ -1145,7 +1146,8 @@
       "Ensure the Axiom mod is compatible with the current Minecraft version."
   ],
     "links": {
-      "Axiom GitHub": "https://github.com/Moulberry/Axiom"
+      "Axiom GitHub": "https://axiom.moulberry.com/",
+      "Axiom Modrinth Link": "https://modrinth.com/mod/axiom"
   }
 },
 
@@ -1194,7 +1196,8 @@
       "Verify the mod's compatibility with your Forge and Minecraft versions."
   ],
     "links": {
-      "Axiom Mod Support": "https://github.com/Moulberry/Axiom/issues"
+      "Axiom GitHub": "https://axiom.moulberry.com/",
+      "Axiom Modrinth Link": "https://modrinth.com/mod/axiom"
   }
 },
 
