@@ -100,7 +100,7 @@
       "description": "An incompatible class cast was attempted.",
       "solution": "Check for plugin/mod compatibility or update your Java version.",
       "causes": [
-        "The source class '${sourceClass}' is not compatible with the target class '${targetClass}'.",
+        "The source class ('${sourceClass}') is not compatible with the target class ('${targetClass}').",
         "Incompatible Java version or mod/plugin configuration."
       ],
       "examples": [
