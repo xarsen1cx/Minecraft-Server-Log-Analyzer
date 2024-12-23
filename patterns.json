@@ -1151,7 +1151,7 @@
 
     {
     "id": 54,
-    "risk": "Critical",
+    "risk": "High",
     "pattern": "ModLauncher services:.*Exception.*",
     "description": "A crash occurred in the ModLauncher during initialization, likely caused by a mod conflict or incomplete installation.",
     "solution": "Check the mod list for compatibility issues and remove problematic mods.",
