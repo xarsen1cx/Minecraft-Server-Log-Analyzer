@@ -1057,7 +1057,7 @@
 {
   "id": 50,
   "risk": "Medium",
-  "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
+  "pattern": "Missing Mods.*: required:.*",
   "description": "One or more required mods are missing, preventing the server from starting.",
   "solution": "Install the missing mods as listed in the logs and ensure all dependencies are satisfied.",
   "causes": [
@@ -1065,7 +1065,8 @@
     "The mod is incompatible with the Forge version."
   ],
   "examples": [
-    "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)"
+    "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)",
+    "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: [mod_name]@[version_range]"
   ],
   "troubleshooting": [
     "Check the mod's documentation for dependencies.",
@@ -1076,9 +1077,7 @@
     "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
   }
 }
-
-
-  
+ 
   ]
 
   
