@@ -1104,7 +1104,7 @@
     {
     "id": 52,
     "risk": "Low",
-    "pattern": "SINYTRA CONNECTOR IS PRESENT!.*https:\\/\\/github\\.com\\/Sinytra\\/Connector\\/issues",
+    "pattern": "(?s)SINYTRA CONNECTOR IS PRESENT!.*?https:\\/\\/github\\.com\\/Sinytra\\/Connector\\/issues",
     "description": "The Connector mod is installed and might be causing compatibility issues.",
     "solution": "Verify the issue with the Connector mod's issue tracker and temporarily remove it to test for conflicts.",
     "causes": [
@@ -1179,7 +1179,7 @@
     "risk": "Medium",
     "pattern": "at com\\.moulberry\\.axiom\\.editor\\.EditorUI\\..*loadFont",
     "description": "Axiom mod failed to load the specified font during initialization.",
-    "solution": "Ensure the font file is present and reinstall the mod if necessary.",
+    "solution": "Ensure the font file is present and reinstall the mod if necessary, Check for ATI/AMD GPU driver updates",
     "causes": [
       "Missing or misplaced font file in the mod's resources.",
       "Corrupted mod files or incompatible Forge version."
@@ -1188,6 +1188,7 @@
       "com.moulberry.axiom.editor.EditorUI.loadFont(EditorUI.java:326)"
   ],
     "troubleshooting": [
+      "Ensure your graphics drivers are up to date",
       "Check for missing font files in the mod's directory.",
       "Reinstall the mod to ensure all files are intact.",
       "Verify the mod's compatibility with your Forge and Minecraft versions."
