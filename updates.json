@@ -1,5 +1,5 @@
 [
-    { "date": "2024-12-23", "update": "New milestone: up to 50 errors it can catch now. New goal 100, where I want to be: 2000+"},
+    { "date": "2024-12-23", "update": "New milestone: up to 50 errors it can catch now. New goal 100, where I want to be: 2000 and more"},
     { "date": "2024-12-20", "update": "Added: If a log catches mod missing, it will suggest links depending on the version and modloader you selected."},
     { "date": "2024-12-20", "update": "Added more Trace errors, fix some back-end issues, added to FAQ"},
     { "date": "2024-12-19", "update": "Fixed back-end to handle huge trace logs."},
