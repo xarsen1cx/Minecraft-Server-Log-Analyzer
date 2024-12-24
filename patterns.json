@@ -1423,7 +1423,121 @@
     "links": {
       "Server Maintenance Guide": "https://minecraft.fandom.com/wiki/Tutorials/Server_maintenance"
     }
+  },
+  {
+    "id": 70,
+    "risk": "High",
+    "pattern": "Mod file .* is missing mods\\.toml file",
+    "description": "A mod file is missing the required mods.toml descriptor, preventing it from loading.",
+    "solution": "Re-download or update the affected mod and ensure compatibility with the Forge and Minecraft versions.",
+    "modName": "#{modName}",
+    "causes": [
+      "The mod file is corrupted or incomplete.",
+      "The mod is not compatible with the current Forge or Minecraft version."
+    ],
+    "examples": [
+      "Mod file C:\\Users\\krist\\curseforge\\minecraft\\Install\\libraries\\net\\minecraftforge\\fmlcore\\1.20.1-47.3.0\\fmlcore-1.20.1-47.3.0.jar is missing mods.toml file"
+    ],
+    "troubleshooting": [
+      "Re-download the mod from a trusted source.",
+      "Ensure the mod is compatible with your Forge and Minecraft versions.",
+      "Check for updates or alternative versions of the mod."
+    ],
+    "links": {
+      "Forge Documentation": "https://mcforge.readthedocs.io/en/latest/"
+    }
+  },
+  {
+    "id": 71,
+    "risk": "High",
+    "pattern": "Error loading class: .+ \\(java\\.lang\\.ClassNotFoundException: .+\\)",
+    "description": "A required class for a mod or mixin could not be found.",
+    "solution": "Verify that all dependencies are installed and the mod is compatible with the Minecraft version.",
+    "causes": [
+      "The mod's dependencies are missing or not installed correctly.",
+      "The mod is incompatible with the Minecraft or Forge version.",
+      "The mod file is corrupted."
+    ],
+    "examples": [
+      "Error loading class: me/jellysquid/mods/sodium/client/render/chunk/compile/pipeline/FluidRenderer (java.lang.ClassNotFoundException: me.jellysquid.mods.sodium.client.render.chunk.compile.pipeline.FluidRenderer)"
+    ],
+    "troubleshooting": [
+      "Ensure all mod dependencies are installed and match the Minecraft version.",
+      "Update or reinstall the mod from a trusted source.",
+      "Check the mod's documentation for compatibility notes."
+    ],
+    "links": {
+      "Forge Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+    }
+  },
+  {
+    "id": 72,
+    "risk": "High",
+    "pattern": "@Mixin target .+ was not found .+",
+    "description": "A mixin is targeting a class that does not exist, likely due to a missing or incompatible mod.",
+    "solution": "Ensure all required mods are installed and up to date. Check for mod compatibility.",
+    "causes": [
+      "The mixin's target class does not exist in the current mod environment.",
+      "The mod or its dependencies are missing or outdated.",
+      "Incompatible Forge or Fabric versions."
+    ],
+    "examples": [
+      "@Mixin target tfar.davespotioneering.blockentity.AdvancedBrewingStandBlockEntity was not found itemproductionlib.mixins.json:davespotioneering/AdvancedBrewingStandBlockEntityMixin"
+    ],
+    "troubleshooting": [
+      "Verify that all required mods are installed and compatible.",
+      "Update mods and dependencies to their latest versions.",
+      "Check the mod's issue tracker for similar problems."
+    ],
+    "links": {
+      "Mixin Documentation": "https://github.com/SpongePowered/Mixin/wiki"
+    }
+  },
+  {
+    "id": 73,
+    "risk": "Medium",
+    "pattern": "Shift\\.BY=.+ exceeds the maximum allowed value: .+",
+    "description": "A mixin shift value exceeds the maximum allowed, causing potential instability.",
+    "solution": "Increase the maximum shift value in the mixin configuration or contact the mod author for a fix.",
+    "causes": [
+      "The mixin's shift value is incorrectly set or exceeds allowed limits.",
+      "A misconfiguration in the mod's mixin file."
+    ],
+    "examples": [
+      "@Inject(@At(\"INVOKE\")) Shift.BY=1 on crittersandcompanions.mixins.json:LivingEntityMixin::handler$caa000$onDie exceeds the maximum allowed value: 0."
+    ],
+    "troubleshooting": [
+      "Increase the maximum shift value in the mixin configuration file.",
+      "Contact the mod author for support or updates.",
+      "Verify the mixin file for syntax or configuration errors."
+    ],
+    "links": {
+      "Mixin Configuration": "https://github.com/SpongePowered/Mixin/wiki"
+    }
+  },
+  {
+    "id": 74,
+    "risk": "High",
+    "pattern": "Compatibility level set to JAVA_\\d+",
+    "description": "Indicates the Java version being used for the mod loader.",
+    "solution": "Ensure the required Java version is installed and matches the mod loader's compatibility.",
+    "causes": [
+      "The Java version being used does not match the mod loader's requirements.",
+      "Incompatible mod loader or configuration."
+    ],
+    "examples": [
+      "Compatibility level set to JAVA_17"
+    ],
+    "troubleshooting": [
+      "Verify the required Java version for the mod loader.",
+      "Install or switch to the correct Java version.",
+      "Check mod loader documentation for compatibility requirements."
+    ],
+    "links": {
+      "Java Compatibility Guide": "https://adoptopenjdk.net/"
+    }
   }
+
   
 ]
 
