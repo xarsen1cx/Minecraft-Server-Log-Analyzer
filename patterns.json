@@ -1,356 +1,340 @@
-  [
-    {
-      "id": 1,
-      "risk": "High",
-      "pattern": "java\\.net\\.ConnectException: Connection refused",
-      "description": "This error occurs when the server cannot be reached.",
-      "solution": "Check if the server is running and reachable.",
-      "causes": [
-        "The server is down or not started.",
-        "Incorrect server address or port.",
-        "Firewall or network configuration blocking the connection."
-      ],
-      "examples": [
-        "java.net.ConnectException: Connection refused: no further information"
-      ],
-      "troubleshooting": [
-        "Ensure the server is running and reachable.",
-        "Check firewall and port forwarding settings.",
-        "Verify the server IP and port in the client configuration."
-      ],
-      "links": {
-        "Network Configuration": "https://minecraft.fandom.com/wiki/Server"
-      }
-    },
-
-    {
-      "id": 2,
-      "risk": "Medium",
-      "pattern": "Plugin (?<plugin>[a-zA-Z0-9]+) failed to load",
-      "description": "The plugin '${plugin}' failed to load due to compatibility or configuration issues.",
-      "solution": "Ensure the plugin '${plugin}' is compatible with your Minecraft version.",
-      "causes": [
-        "Plugin version is outdated or incompatible.",
-        "Missing dependencies required by the plugin.",
-        "Plugin files are corrupted."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "Update the plugin to the latest version.",
-        "Check if all required dependencies are installed.",
-        "Re-download the plugin files and verify their integrity."
-      ],
-      "links": {
-        "Plugin Troubleshooting": "https://www.spigotmc.org/forums/spigot-plugin-help.42/"
-      }
-    },
-
-    {
-      "id": 3,
-      "risk": "High",
-      "pattern": "(?<mod>ItemLocksFabric)",
-      "description": "The ItemLocksFabric ItemLock is purely client-side and does not work on servers.",
-      "solution": "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder.",
-      "causes": [
-        "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder."
-      ],
-      "examples": [
-        "[ItemLocksFabric] No examples given yet..."
-      ],
-      "troubleshooting": [
-        "Itemlock mod is client-side only and does not work on servers.",
-        "Remove from your server mods folder"
-      ],
-      "links": {
-        "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
-      }
-    },
-
-    {
-      "id": 4,
-      "risk": "High",
-      "pattern": "java\\.lang\\.OutOfMemoryError",
-      "description": "The server has run out of memory.",
-      "solution": "Upgrade the server's RAM or reduce the number of plugins or mods.",
-      "causes": [
-        "High server load due to concurrent logins",
-        "Slow network response from the client",
-        "Improper server configuration for ${mod}"
-      ],
-      "examples": [
-        "[Out Of Memory = true]"
-      ],
-      "troubleshooting": [
-        "Server: out of memory = true, you should upgrade your server's RAM, or reduce the number of plugins or mods.",
-        "Client-Side: In your modloader client, you can increase the amount of memory allocated to the game."
-      ],
-      "links": {
-        "Apex example": "https://apexminecrafthosting.com/how-to-allocate-more-ram/",
-        "Curse Forge Client": "https://www.youtube.com/watch?v=Xa-I0IFeCsE&t=1s&ab_channel=MelonCube",
-        "Feed The Beast Client": "https://forum.feed-the-beast.com/threads/how-to-allocate-ram-in-the-ftb-launcher.302294/"
-      }
-    },
-
-    {
-      "id": 5,
-      "risk": "High",
-      "pattern": "java\\.lang\\.ClassCastException: class (?<sourceClass>[a-zA-Z0-9.$_]+) cannot be cast to class (?<targetClass>[a-zA-Z0-9.$_]+)",
-      "description": "An incompatible class cast was attempted.",
-      "solution": "Check for plugin/mod compatibility or update your Java version.",
-      "causes": [
-        "The source class (${sourceClass}) is not compatible with the target class (${targetClass}).",
-        "Incompatible Java version or mod/plugin configuration."
-      ],
-      "examples": [
-        "java.lang.ClassCastException: class jdk.internal.loader.ClassLoaders$AppClassLoader cannot be cast to class java.net.URLClassLoader"
-      ],
-      "troubleshooting": [
-        "Verify that the mods/plugins being used are compatible with the server's Java version.",
-        "Update to a supported Java runtime version.",
-        "Ensure no conflicting class loaders are being used by mods/plugins."
-      ],
-      "links": {
-        "Java Documentation": "https://docs.oracle.com/javase/8/docs/api/",
-        "Forge Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/",
-        "Which Version of Java for your Minecraft Version": "https://cybrancee.com/learn/knowledge-base/which-version-of-java-for-your-minecraft-version/"
-      }
-    },
-
-    {
-      "id": 6,
-      "risk": "Medium",
-      "pattern": "java\\.io\\.FileNotFoundException:.*",
-      "description": "A required file is missing or corrupted.",
-      "solution": "Verify your modpack or server files.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 7,
-      "risk": "High",
-      "pattern": "java\\.lang\\.StackOverflowError",
-      "description": "A recursive loop in your code or a plugin caused this error.",
-      "solution": "Disable recent changes or plugins to debug.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 8,
-      "risk": "High",
-      "pattern": "java\\.util\\.zip\\.ZipException: error in opening zip file",
-      "description": "A mod or plugin file is corrupted.",
-      "solution": "Re-download and replace the affected mod/plugin.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 9,
-      "risk": "High",
-      "pattern": "Exception in server tick loop",
-      "description": "The server crashed due to a mod, plugin, or configuration error.",
-      "solution": "Check logs and recent changes for the issue.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 10,
-      "risk": "High",
-      "pattern": "java\\.lang\\.NullPointerException",
-      "description": "A plugin or mod accessed an invalid object.",
-      "solution": "Update or remove the problematic plugin/mod.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 11,
-      "risk": "High",
-      "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
-      "description": "A required mod is missing.",
-      "solution": "Install all required mod dependencies.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 12,
-      "risk": "Medium",
-      "pattern": "java\\.net\\.SocketTimeoutException",
-      "description": "Network issues are causing timeouts.",
-      "solution": "Check the server's network configuration or player's internet connection.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 13,
-      "risk": "High",
-      "pattern": "Cannot bind to port",
-      "description": "The port the server needs is already in use.",
-      "solution": "Ensure no other server or application is using the same port.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 14,
-      "risk": "High",
-      "pattern": "Outdated server! I’m still on .*",
-      "description": "The server version is outdated compared to the client.",
-      "solution": "Update the server to match the client version.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 15,
-      "risk": "High",
-      "pattern": "Outdated client! Please use .*",
-      "description": "The client version is outdated compared to the server.",
-      "solution": "Update the client to match the server version.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 16,
-      "risk": "High",
-      "pattern": "You need to agree to the EULA",
-      "description": "The EULA agreement has not been accepted.",
-      "solution": "Set 'eula=true' in the 'eula.txt' file after reviewing it.",
-      "causes": [
-        "High server load due to concurrent logins",
-        "Slow network response from the client",
-        "Improper server configuration for ${mod}"
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "Ensure you accept the EULA agreement by setting 'eula=true' in the 'eula.txt' file.",
-        "If no file name eula.txt is found, create a new text file named eula.txt and add eula=true to the file, ans save it."
-      ],
-      "links": {
-        "Eula Minecraft": "https://www.minecraft.net/en-us/eula"
-      }
-    },
-
-    {
-      "id": 17,
-      "risk": "High",
-      "pattern": "This crash report has been saved to:",
-      "description": "The server generated a crash report.",
-      "solution": "Check the crash report file for details.",
-      "causes": [
-        "When a server Crash Report is generated, it is saved to the server's crash-reports folder. The file name will be in the format 'crash-YYYY-MM-DD_HH-MM-SS-server.txt'."
-      ],
-      "examples": [
+[
+  {
+    "id": 1,
+    "risk": "High",
+    "pattern": "java\\.net\\.ConnectException: Connection refused",
+    "description": "This error occurs when the server cannot be reached.",
+    "solution": "Check if the server is running and reachable.",
+    "causes": [
+      "The server is down or not started.",
+      "Incorrect server address or port.",
+      "Firewall or network configuration blocking the connection."
+    ],
+    "examples": [
+      "java.net.ConnectException: Connection refused: no further information"
+    ],
+    "troubleshooting": [
+      "Ensure the server is running and reachable.",
+      "Check firewall and port forwarding settings.",
+      "Verify the server IP and port in the client configuration."
+    ],
+    "links": {
+      "Network Configuration": "https://minecraft.fandom.com/wiki/Server"
+    }
+  },
+  {
+    "id": 2,
+    "risk": "Medium",
+    "pattern": "Plugin (?<plugin>[a-zA-Z0-9]+) failed to load",
+    "description": "The plugin '${plugin}' failed to load due to compatibility or configuration issues.",
+    "solution": "Ensure the plugin '${plugin}' is compatible with your Minecraft version.",
+    "causes": [
+      "Plugin version is outdated or incompatible.",
+      "Missing dependencies required by the plugin.",
+      "Plugin files are corrupted."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "Update the plugin to the latest version.",
+      "Check if all required dependencies are installed.",
+      "Re-download the plugin files and verify their integrity."
+    ],
+    "links": {
+      "Plugin Troubleshooting": "https://www.spigotmc.org/forums/spigot-plugin-help.42/"
+    }
+  },
+  {
+    "id": 3,
+    "risk": "High",
+    "pattern": "(?<mod>ItemLocksFabric)",
+    "description": "The ItemLocksFabric ItemLock is purely client-side and does not work on servers.",
+    "solution": "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder.",
+    "causes": [
+      "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder."
+    ],
+    "examples": [
+      "[ItemLocksFabric] No examples given yet..."
+    ],
+    "troubleshooting": [
+      "Itemlock mod is client-side only and does not work on servers.",
+      "Remove from your server mods folder"
+    ],
+    "links": {
+      "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
+    }
+  },
+  {
+    "id": 4,
+    "risk": "High",
+    "pattern": "java\\.lang\\.OutOfMemoryError",
+    "description": "The server has run out of memory.",
+    "solution": "Upgrade the server's RAM or reduce the number of plugins or mods.",
+    "causes": [
+      "High server load due to concurrent logins",
+      "Slow network response from the client",
+      "Improper server configuration for ${mod}"
+    ],
+    "examples": [
+      "[Out Of Memory = true]"
+    ],
+    "troubleshooting": [
+      "Server: out of memory = true, you should upgrade your server's RAM, or reduce the number of plugins or mods.",
+      "Client-Side: In your modloader client, you can increase the amount of memory allocated to the game."
+    ],
+    "links": {
+      "Apex example": "https://apexminecrafthosting.com/how-to-allocate-more-ram/",
+      "Curse Forge Client": "https://www.youtube.com/watch?v=Xa-I0IFeCsE&t=1s&ab_channel=MelonCube",
+      "Feed The Beast Client": "https://forum.feed-the-beast.com/threads/how-to-allocate-ram-in-the-ftb-launcher.302294/"
+    }
+  },
+  {
+    "id": 5,
+    "risk": "High",
+    "pattern": "java\\.lang\\.ClassCastException: class (?<sourceClass>[a-zA-Z0-9.$_]+) cannot be cast to class (?<targetClass>[a-zA-Z0-9.$_]+)",
+    "description": "An incompatible class cast was attempted.",
+    "solution": "Check for plugin/mod compatibility or update your Java version.",
+    "causes": [
+      "The source class (${sourceClass}) is not compatible with the target class (${targetClass}).",
+      "Incompatible Java version or mod/plugin configuration."
+    ],
+    "examples": [
+      "java.lang.ClassCastException: class jdk.internal.loader.ClassLoaders$AppClassLoader cannot be cast to class java.net.URLClassLoader"
+    ],
+    "troubleshooting": [
+      "Verify that the mods/plugins being used are compatible with the server's Java version.",
+      "Update to a supported Java runtime version.",
+      "Ensure no conflicting class loaders are being used by mods/plugins."
+    ],
+    "links": {
+      "Java Documentation": "https://docs.oracle.com/javase/8/docs/api/",
+      "Forge Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/",
+      "Which Version of Java for your Minecraft Version": "https://cybrancee.com/learn/knowledge-base/which-version-of-java-for-your-minecraft-version/"
+    }
+  },
+  {
+    "id": 6,
+    "risk": "Medium",
+    "pattern": "java\\.io\\.FileNotFoundException:.*",
+    "description": "A required file is missing or corrupted.",
+    "solution": "Verify your modpack or server files.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 7,
+    "risk": "High",
+    "pattern": "java\\.lang\\.StackOverflowError",
+    "description": "A recursive loop in your code or a plugin caused this error.",
+    "solution": "Disable recent changes or plugins to debug.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 8,
+    "risk": "High",
+    "pattern": "java\\.util\\.zip\\.ZipException: error in opening zip file",
+    "description": "A mod or plugin file is corrupted.",
+    "solution": "Re-download and replace the affected mod/plugin.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 9,
+    "risk": "High",
+    "pattern": "Exception in server tick loop",
+    "description": "The server crashed due to a mod, plugin, or configuration error.",
+    "solution": "Check logs and recent changes for the issue.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 10,
+    "risk": "High",
+    "pattern": "java\\.lang\\.NullPointerException",
+    "description": "A plugin or mod accessed an invalid object.",
+    "solution": "Update or remove the problematic plugin/mod.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 11,
+    "risk": "High",
+    "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
+    "description": "A required mod is missing.",
+    "solution": "Install all required mod dependencies.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 12,
+    "risk": "Medium",
+    "pattern": "java\\.net\\.SocketTimeoutException",
+    "description": "Network issues are causing timeouts.",
+    "solution": "Check the server's network configuration or player's internet connection.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 13,
+    "risk": "High",
+    "pattern": "Cannot bind to port",
+    "description": "The port the server needs is already in use.",
+    "solution": "Ensure no other server or application is using the same port.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 14,
+    "risk": "High",
+    "pattern": "Outdated server! I’m still on .*",
+    "description": "The server version is outdated compared to the client.",
+    "solution": "Update the server to match the client version.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 15,
+    "risk": "High",
+    "pattern": "Outdated client! Please use .*",
+    "description": "The client version is outdated compared to the server.",
+    "solution": "Update the client to match the server version.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 16,
+    "risk": "High",
+    "pattern": "You need to agree to the EULA",
+    "description": "The EULA agreement has not been accepted.",
+    "solution": "Set 'eula=true' in the 'eula.txt' file after reviewing it.",
+    "causes": [
+      "High server load due to concurrent logins",
+      "Slow network response from the client",
+      "Improper server configuration for ${mod}"
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "Ensure you accept the EULA agreement by setting 'eula=true' in the 'eula.txt' file.",
+      "If no file name eula.txt is found, create a new text file named eula.txt and add eula=true to the file, ans save it."
+    ],
+    "links": {
+      "Eula Minecraft": "https://www.minecraft.net/en-us/eula"
+    }
+  },
+  {
+    "id": 17,
+    "risk": "High",
+    "pattern": "This crash report has been saved to:",
+    "description": "The server generated a crash report.",
+    "solution": "Check the crash report file for details.",
+    "causes": [
+      "When a server Crash Report is generated, it is saved to the server's crash-reports folder. The file name will be in the format 'crash-YYYY-MM-DD_HH-MM-SS-server.txt'."
+    ],
+    "examples": [
       " --- Minecraft Crash Report ---",
       "// I just don't know what went wrong :(",
       "Time: 6/28/21 4:20 PM",
@@ -361,605 +345,576 @@
       "    at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:668)",
       "    at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:526)",
       "    at java.lang.Thread.run(Thread.java:748)"
-      ],
-      "troubleshooting": [
-        "When a server Crash Report is generated, it is saved to the server's crash-reports folder. The file name will be in the format 'crash-YYYY-MM-DD_HH-MM-SS-server.txt'."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 19,
-      "risk": "High",
-      "pattern": "Failed to verify username!",
-      "description": "Mojang authentication servers may be down, or server settings need adjustment.",
-      "solution": "Check the server.properties file and Mojang status.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 20,
-      "risk": "High",
-      "pattern": "Entity ticking error",
-      "description": "A problematic entity caused the crash.",
-      "solution": "Use MCEdit or similar tools to remove the entity.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 21,
-      "risk": "High",
-      "pattern": "openjdk version \\\"(?<version>[\\d\\.]+)\\\" (?<date>[\\d\\-]+) LTS",
-      "description": "Java version and build date detected.",
-      "solution": "Ensure the required Java version matches the server or modpack requirements.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 22,
-      "risk": "High",
-      "pattern": "Distant Horizons.*encountered an error during the sided_setup event phase",
-      "description": "Error with the Distant Horizons mod during the sided setup event phase. The error occurs because a configGui instance is null, causing a NullPointerException. This results in a server startup failure.",
-      "solution": "Ensure the Distant Horizons mod version is compatible with the server/forge version. Verify if the Distant Horizons mod requires additional libraries or dependencies not included in your modpack. Remove this mod to see if your server will boot.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "Gitlab": "https://gitlab.com/distant-horizons-team/distant-horizons",
-        "CurseForge": "https://www.curseforge.com/minecraft/mc-mods/distant-horizons",
-        "Gitlab-issues": "https://gitlab.com/distant-horizons-team/distant-horizons/-/issues"
-      }
-    },
-
-    {
-      "id": 23,
-      "risk": "High",
-      "pattern": "Registry entry.*wildernature:[a-z_]+.*was not realized!",
-      "description": "Multiple warnings indicate that Wilder Nature entity types (e.g., wildernature:raccoon) were not realized during the registry phase.",
-      "solution": "Verify that the Wilder Nature mod is compatible with the current Forge and Minecraft versions. Ensure all dependencies for the Wilder Nature mod are present and up to date. Reset the mod’s configuration files in the config/ directory to their defaults. Temporarily disable other mods to test if conflicts prevent Wilder Nature from loading entities properly. Check for updates to Wilder Nature addressing this issue. Report this issue on the mod's support page or issue tracker.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 24,
-      "risk": "Low",
-      "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took \\d+\\.\\d+ seconds.*",
-      "description": "The server detected a hang, where a single server tick took significantly longer than the expected maximum of 0.05 seconds. This indicates minor server lag.",
-      "solution": "You can turn off watchdog by going to - YourServerFolder/server.properties - max-tick-time=-1 - Default is 60000",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 25,
-      "risk": "Low",
-      "pattern": "Server is still starting! Please wait before reconnecting\\.",
-      "description": "A player attempted to connect while the server was still starting.",
-      "solution": "Inform players to wait for the server to fully start before reconnecting.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 26,
-      "risk": "Low",
-      "pattern": "Preparing spawn area: \\d+%",
-      "description": "The server is preparing the spawn area.",
-      "solution": "This is normal during server startup and does not require action.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 27,
-      "risk": "Medium",
-      "pattern": "A new sound was added after the sounds were registered and therefore the new sound could not be added!",
-      "description": "Chance Cubes mod failed to register a new sound after the sound registration phase.",
-      "solution": "Verify that the Chance Cubes mod is compatible with the current version of Minecraft/Forge.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 28,
-      "risk": "Low",
-      "pattern": "Couldn't fully analyze .* free_runners_armored.*missing knowledge for \\{.*\\}",
-      "description": "The Immersive Engineering mod encountered an incomplete analysis for free_runners_armored.",
-      "solution": "Ensure all dependencies for Immersive Engineering are installed and compatible. If the issue persists, report it to the mod developers.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "[No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 29,
-      "risk": "High",
-      "pattern": "Could not serialize .*\\(class .*\\) - will not be sent to client!",
-      "description": "A mod or plugin failed to serialize a custom argument type, causing communication issues with the client.",
-      "solution": "Check the logs for details about the specific mod or plugin causing the issue. Ensure it is compatible with the current Minecraft/Forge version.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 30,
-      "risk": "High",
-      "pattern": "net\\.minecraft\\.ReportedException: Ticking block entity",
-      "description": "A block entity caused the server to crash.",
-      "solution": "Use a tool like MCEdit to locate and remove the problematic block entity. Check mod compatibility and update all mods to their latest versions.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 31,
-      "risk": "High",
-      "pattern": "Invalid stack for slot: .*",
-      "description": "A mod (e.g., Mekanism) encountered an invalid stack for a specific inventory slot.",
-      "solution": "Ensure the mod causing the issue is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity.",
-      "causes": [
-        "Corrupted item data in the player's inventory.",
-        "Mod conflict causing invalid item registration.",
-        "Server desynchronization with client inventory data"
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 31,
-      "risk": "High",
-      "pattern": "Invalid stack for slot: .*\\((?<mod>[a-zA-Z0-9._-]+)\\)",
-      "description": "A mod ('${mod}') encountered an invalid stack for a specific inventory slot.",
-      "solution": "Ensure the mod '${mod}' is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 32,
-      "risk": "High",
-      "pattern": "com\\.google\\.gson\\.JsonSyntaxException: Expected name to be an item, was unknown string '(?<mod>[a-zA-Z0-9_:-]+)'",
-      "description": "A loot table contains an invalid or unknown item in the mod: ${mod}.",
-      "solution": "Verify the loot table configuration for ${mod}. Ensure the specified items exist and are correctly registered.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 33,
-      "risk": "High",
-      "pattern": "java\\.lang\\.IllegalArgumentException: Can't find block (?<mod>[a-zA-Z0-9_:-]+)",
-      "description": "The block referenced in the loot table is missing in the mod: ${mod}.",
-      "solution": "Check if the block exists in the ${mod} mod or verify that the mod version is correct.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 34,
-      "risk": "High",
-      "pattern": "net\\.minecraft\\.world\\.level\\.storage\\.loot\\.LootTables.*Couldn't parse loot table (?<mod>[a-zA-Z0-9_:-]+):blocks/[a-zA-Z0-9_:-]+",
-      "description": "Loot table parsing failed for a block in the mod: ${mod}.",
-      "solution": "Verify the loot table syntax in the ${mod} mod. Ensure the items, blocks, and properties referenced exist.",
-      "causes": [
-        "HNo examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 35,
-      "risk": "Medium",
-      "pattern": "java\\.util\\.concurrent\\.ForkJoinTask.*",
-      "description": "A concurrency task encountered an error, possibly due to high server load.",
-      "solution": "Reduce the server load or check for problematic tasks in mods or plugins. Consider optimizing server performance.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 36,
-      "risk": "High",
-      "pattern": "dev\\.latvian\\.mods\\.kubejs\\.core\\.LootTablesKJS.*applyKJS0.*",
-      "description": "A loot table in the KubeJS mod failed to apply.",
-      "solution": "Check the KubeJS scripts for syntax or logical errors related to loot tables.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": "37",
-      "risk": "Low",
-      "pattern": "\\[.*?ERROR\\]: Username '(.*?)' tried to join with an invalid session",
-      "description": "A player attempted to join with an invalid session.",
-      "solution": "The session for the player '${1}' is invalid. Ask the player to log out of their Minecraft client and log back in to refresh their session.",
-      "causes": [
-        "No examples given yet..."
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "No examples given yet..."
-      ],
-      "links": {
-        "No examples given yet...": "No examples given yet..."
-      }
-    },
-
-    {
-      "id": 38,
-      "risk": "Low",
-      "pattern": "\\[\\s*(?<mod>LuckPerms)\\s*\\] Processing login for (?<username>\\S+) took (?<time>\\d+)ms",
-      "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
-      "solution": "Optimize ${mod} performance by reviewing server load and connection times.",
-      "causes": [
-        "High server load due to concurrent logins",
-        "Slow network response from the client",
-        "Improper server configuration for ${mod}"
-      ],
-      "examples": [
-        "No examples given yet..."
-      ],
-      "troubleshooting": [
-        "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
-        "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
-        "Review ${mod}'s configuration settings.",
-        "Verify client connections for stability."
-      ],
-      "links": {
-        "Wiki Documentation": "https://luckperms.net/wiki/Home",
-        "GitHub": "https://github.com/lucko/LuckPerms",
-        "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
-      }
-    },
-
-    {
-      "id": 39,
-      "risk": "High",
-      "pattern": "(?<mod>ItemLocks)",
-      "description": "The ItemLocksFabric ItemLock is purely client-side and does not work on servers.",
-      "solution": "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder.",
-      "causes": [
-        "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder."
-      ],
-      "examples": [
-        "[ItemLocksFabric] No examples given yet..."
-      ],
-      "troubleshooting": [
-        "Itemlock mod is client-side only and does not work on servers.",
-        "Remove from your server mods folder"
-      ],
-      "links": {
-        "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
-      }
-    },
-    
-      {
-        "id": 40,
-        "risk": "High",
-        "pattern": "java\\.lang\\.RuntimeException: Tried to read NBT tag with too high complexity, depth > [0-9]+",
-        "description": "A corrupted or excessively nested NBT structure is causing the save file or world data to be unreadable.",
-        "solution": "Use an NBT editor (e.g., NBTExplorer) to identify and remove the problematic NBT data. Restore the world from a backup if available.",
-        "causes": [
-          "A mod stored infinitely nested or malformed NBT data.",
-          "Corrupted world data due to a crash or forced shutdown.",
-          "Incompatible mods writing invalid NBT entries."
-        ],
-        "examples": [
-          "java.lang.RuntimeException: Tried to read NBT tag with too high complexity, depth > 512"
-        ],
-        "troubleshooting": [
-          "Open the world files with NBTExplorer to locate and fix the offending data.",
-          "Temporarily remove recently added mods to isolate which one created the invalid data.",
-          "Restore from a known good backup of the world."
-        ],
-        "links": {
-          "NBTExplorer": "https://github.com/jaquadro/NBTExplorer"
-      }
-    },
-    
-      {
-        "id": 41,
-        "risk": "Medium",
-        "pattern": "Can't keep up! Is the server overloaded\\? Running [0-9]+ms or [0-9]+ ticks behind",
-        "description": "The server is experiencing lag and cannot process ticks at the expected rate.",
-        "solution": "Optimize server performance by allocating more RAM, reducing the number of mods/plugins, or upgrading hardware.",
-        "causes": [
-          "Insufficient RAM or CPU resources.",
-          "Too many entities, mods, or complex redstone contraptions.",
-          "Heavy chunk loading or world generation."
-        ],
-        "examples": [
-          "Can't keep up! Is the server overloaded? Running 2199ms or 43 ticks behind"
-        ],
-        "troubleshooting": [
-          "Allocate more RAM to the server.",
-          "Remove or limit heavy mods and resource-intensive builds.",
-          "Optimize server settings (e.g., view distance).",
-          "Check server hardware performance."
-        ],
-        "links": {
-          "Server Optimization Tips": "https://minecraft.fandom.com/wiki/Tutorials/Improving_frame_rate"
-      }
-    },
-    
-      {
-        "id": 42,
-        "risk": "Low",
-        "pattern": "defineId called for: class net\\.minecraft\\.world\\.entity\\.TamableAnimal from interface dev\\.muon\\.medievalorigins\\.entity\\.IFollowingSummon",
-        "description": "A mod-related warning indicating data ID definition for a tamable animal entity that follows a summon interface.",
-        "solution": "Check if the Medieval Origins mod is up-to-date and compatible with the current Minecraft/Forge version. This is generally a harmless warning.",
-        "causes": [
-          "The mod 'Medieval Origins' or a related entity mod may be registering entities in an unusual way."
-        ],
-        "examples": [
-          "defineId called for: class net.minecraft.world.entity.TamableAnimal from interface dev.muon.medievalorigins.entity.IFollowingSummon"
-        ],
-        "troubleshooting": [
-          "Update or verify the Medieval Origins mod version.",
-          "Check the mod's issue tracker for similar warnings."
-        ],
-        "links": {
-          "Medieval Origins Mod": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins"
-      }
-    },
-    
-    {
-      "id": 43,
-      "risk": "Medium",
-      "pattern": "openjdk version \\\"(?<java_version>[\\d\\.]+_[\\d]+)\\\"",
-      "description": "Detected Java version.",
-      "solution": "Ensure the Java version matches the server or modpack requirements.",
-      "causes": [
-        "Not yet added..."
-      ],
-      "examples": [
-        "Not yet added..."
-      ],
-      "troubleshooting": [
-        "Not yet added..."
-      ],
-      "links": {
-        "Not yet added...": "Not yet added..."
-      }
-    },
-    
-    {
-      "id": 44,
-      "risk": "Medium",
-      "pattern": "Minecraft version: (?<mc_version>[0-9\\.]+)",
-      "description": "Detected Minecraft version from logs.",
-      "solution": "Ensure mods are compatible with this version.",
-      "causes": [
-        "Not yet added..."
-      ],
-      "examples": [
-        "Not yet added..."
-      ],
-      "troubleshooting": [
-        "Not yet added..."
-      ],
-      "links": {
-        "Not yet added...": "Not yet added..."
-      }
-    },
-    
-    {
-      "id": 45,
-      "risk": "High",
-      "pattern": "Missing required mod: (?<missing_mod>.+)",
-      "description": "A required mod, (${missing_mod}), is missing from the server configuration.",
-      "solution": "Ensure the mod (${missing_mod}) is installed and loaded.",
-      "modName": "${missing_mod}",
-      "causes": [
-        "The required mod is not present in the `mods/` folder.",
-        "The mod version is incompatible with the server version."
-      ],
-      "examples": [
-        "[ERROR]: Missing required mod: Mouse Tweaks",
-        "[ERROR]: Missing required mod: JourneyMap",
-        "[ERROR]: Missing required mod: Just Enough Items (JEI)"
-      ],
-      "troubleshooting": [
-        "Check the `mods/` folder to ensure the mod is installed.",
-        "Ensure the mod version is compatible with the server and other mods.",
-        "Download the missing mod from a trusted source (e.g., CurseForge)."
-      ],
-      "links": {
-        "CurseForge": "https://www.curseforge.com/",
-        "Feed The Beast - ModPacks": "https://www.feed-the-beast.com/modpacks?sort=featured"
-      }
-    },
-
-    {
+    ],
+    "troubleshooting": [
+      "When a server Crash Report is generated, it is saved to the server's crash-reports folder. The file name will be in the format 'crash-YYYY-MM-DD_HH-MM-SS-server.txt'."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 19,
+    "risk": "High",
+    "pattern": "Failed to verify username!",
+    "description": "Mojang authentication servers may be down, or server settings need adjustment.",
+    "solution": "Check the server.properties file and Mojang status.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 20,
+    "risk": "High",
+    "pattern": "Entity ticking error",
+    "description": "A problematic entity caused the crash.",
+    "solution": "Use MCEdit or similar tools to remove the entity.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 21,
+    "risk": "High",
+    "pattern": "openjdk version \\\"(?<version>[\\d\\.]+)\\\" (?<date>[\\d\\-]+) LTS",
+    "description": "Java version and build date detected.",
+    "solution": "Ensure the required Java version matches the server or modpack requirements.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 22,
+    "risk": "High",
+    "pattern": "Distant Horizons.*encountered an error during the sided_setup event phase",
+    "description": "Error with the Distant Horizons mod during the sided setup event phase. The error occurs because a configGui instance is null, causing a NullPointerException. This results in a server startup failure.",
+    "solution": "Ensure the Distant Horizons mod version is compatible with the server/forge version. Verify if the Distant Horizons mod requires additional libraries or dependencies not included in your modpack. Remove this mod to see if your server will boot.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "Gitlab": "https://gitlab.com/distant-horizons-team/distant-horizons",
+      "CurseForge": "https://www.curseforge.com/minecraft/mc-mods/distant-horizons",
+      "Gitlab-issues": "https://gitlab.com/distant-horizons-team/distant-horizons/-/issues"
+    }
+  },
+  {
+    "id": 23,
+    "risk": "High",
+    "pattern": "Registry entry.*wildernature:[a-z_]+.*was not realized!",
+    "description": "Multiple warnings indicate that Wilder Nature entity types (e.g., wildernature:raccoon) were not realized during the registry phase.",
+    "solution": "Verify that the Wilder Nature mod is compatible with the current Forge and Minecraft versions. Ensure all dependencies for the Wilder Nature mod are present and up to date. Reset the mod’s configuration files in the config/ directory to their defaults. Temporarily disable other mods to test if conflicts prevent Wilder Nature from loading entities properly. Check for updates to Wilder Nature addressing this issue. Report this issue on the mod's support page or issue tracker.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 24,
+    "risk": "Low",
+    "pattern": "java\\.lang\\.Error: ServerHangWatchdog detected that a single server tick took \\d+\\.\\d+ seconds.*",
+    "description": "The server detected a hang, where a single server tick took significantly longer than the expected maximum of 0.05 seconds. This indicates minor server lag.",
+    "solution": "You can turn off watchdog by going to - YourServerFolder/server.properties - max-tick-time=-1 - Default is 60000",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 25,
+    "risk": "Low",
+    "pattern": "Server is still starting! Please wait before reconnecting\\.",
+    "description": "A player attempted to connect while the server was still starting.",
+    "solution": "Inform players to wait for the server to fully start before reconnecting.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 26,
+    "risk": "Low",
+    "pattern": "Preparing spawn area: \\d+%",
+    "description": "The server is preparing the spawn area.",
+    "solution": "This is normal during server startup and does not require action.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 27,
+    "risk": "Medium",
+    "pattern": "A new sound was added after the sounds were registered and therefore the new sound could not be added!",
+    "description": "Chance Cubes mod failed to register a new sound after the sound registration phase.",
+    "solution": "Verify that the Chance Cubes mod is compatible with the current version of Minecraft/Forge.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 28,
+    "risk": "Low",
+    "pattern": "Couldn't fully analyze .* free_runners_armored.*missing knowledge for \\{.*\\}",
+    "description": "The Immersive Engineering mod encountered an incomplete analysis for free_runners_armored.",
+    "solution": "Ensure all dependencies for Immersive Engineering are installed and compatible. If the issue persists, report it to the mod developers.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "[No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 29,
+    "risk": "High",
+    "pattern": "Could not serialize .*\\(class .*\\) - will not be sent to client!",
+    "description": "A mod or plugin failed to serialize a custom argument type, causing communication issues with the client.",
+    "solution": "Check the logs for details about the specific mod or plugin causing the issue. Ensure it is compatible with the current Minecraft/Forge version.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 30,
+    "risk": "High",
+    "pattern": "net\\.minecraft\\.ReportedException: Ticking block entity",
+    "description": "A block entity caused the server to crash.",
+    "solution": "Use a tool like MCEdit to locate and remove the problematic block entity. Check mod compatibility and update all mods to their latest versions.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 31,
+    "risk": "High",
+    "pattern": "Invalid stack for slot: .*",
+    "description": "A mod (e.g., Mekanism) encountered an invalid stack for a specific inventory slot.",
+    "solution": "Ensure the mod causing the issue is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity.",
+    "causes": [
+      "Corrupted item data in the player's inventory.",
+      "Mod conflict causing invalid item registration.",
+      "Server desynchronization with client inventory data"
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 31,
+    "risk": "High",
+    "pattern": "Invalid stack for slot: .*\\((?<mod>[a-zA-Z0-9._-]+)\\)",
+    "description": "A mod ('${mod}') encountered an invalid stack for a specific inventory slot.",
+    "solution": "Ensure the mod '${mod}' is up-to-date and compatible with the Minecraft/Forge version. Reset the affected block or entity.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 32,
+    "risk": "High",
+    "pattern": "com\\.google\\.gson\\.JsonSyntaxException: Expected name to be an item, was unknown string '(?<mod>[a-zA-Z0-9_:-]+)'",
+    "description": "A loot table contains an invalid or unknown item in the mod: ${mod}.",
+    "solution": "Verify the loot table configuration for ${mod}. Ensure the specified items exist and are correctly registered.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 33,
+    "risk": "High",
+    "pattern": "java\\.lang\\.IllegalArgumentException: Can't find block (?<mod>[a-zA-Z0-9_:-]+)",
+    "description": "The block referenced in the loot table is missing in the mod: ${mod}.",
+    "solution": "Check if the block exists in the ${mod} mod or verify that the mod version is correct.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 34,
+    "risk": "High",
+    "pattern": "net\\.minecraft\\.world\\.level\\.storage\\.loot\\.LootTables.*Couldn't parse loot table (?<mod>[a-zA-Z0-9_:-]+):blocks/[a-zA-Z0-9_:-]+",
+    "description": "Loot table parsing failed for a block in the mod: ${mod}.",
+    "solution": "Verify the loot table syntax in the ${mod} mod. Ensure the items, blocks, and properties referenced exist.",
+    "causes": [
+      "HNo examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 35,
+    "risk": "Medium",
+    "pattern": "java\\.util\\.concurrent\\.ForkJoinTask.*",
+    "description": "A concurrency task encountered an error, possibly due to high server load.",
+    "solution": "Reduce the server load or check for problematic tasks in mods or plugins. Consider optimizing server performance.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 36,
+    "risk": "High",
+    "pattern": "dev\\.latvian\\.mods\\.kubejs\\.core\\.LootTablesKJS.*applyKJS0.*",
+    "description": "A loot table in the KubeJS mod failed to apply.",
+    "solution": "Check the KubeJS scripts for syntax or logical errors related to loot tables.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": "37",
+    "risk": "Low",
+    "pattern": "\\[.*?ERROR\\]: Username '(.*?)' tried to join with an invalid session",
+    "description": "A player attempted to join with an invalid session.",
+    "solution": "The session for the player '${1}' is invalid. Ask the player to log out of their Minecraft client and log back in to refresh their session.",
+    "causes": [
+      "No examples given yet..."
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "No examples given yet..."
+    ],
+    "links": {
+      "No examples given yet...": "No examples given yet..."
+    }
+  },
+  {
+    "id": 38,
+    "risk": "Low",
+    "pattern": "\\[\\s*(?<mod>LuckPerms)\\s*\\] Processing login for (?<username>\\S+) took (?<time>\\d+)ms",
+    "description": "The mod '${mod}' processed login for user '${username}' which took ${time}ms.",
+    "solution": "Optimize ${mod} performance by reviewing server load and connection times.",
+    "causes": [
+      "High server load due to concurrent logins",
+      "Slow network response from the client",
+      "Improper server configuration for ${mod}"
+    ],
+    "examples": [
+      "No examples given yet..."
+    ],
+    "troubleshooting": [
+      "When you try to join a Fabric server through BungeeCord/Waterfall using FabricProxy, LuckPerms does not allow that login because player's data couldn't be loaded during the pre-login stage.",
+      "Check server TPS and reduce load, you can test the tps by typing /tps or /forge tps",
+      "Review ${mod}'s configuration settings.",
+      "Verify client connections for stability."
+    ],
+    "links": {
+      "Wiki Documentation": "https://luckperms.net/wiki/Home",
+      "GitHub": "https://github.com/lucko/LuckPerms",
+      "Fabric known issues": "https://github.com/LuckPerms/LuckPerms/issues/2873"
+    }
+  },
+  {
+    "id": 39,
+    "risk": "High",
+    "pattern": "(?<mod>ItemLocks)",
+    "description": "The ItemLocksFabric ItemLock is purely client-side and does not work on servers.",
+    "solution": "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder.",
+    "causes": [
+      "Remove the ItemLocksFabric, ItemLock Mod from your server Mods folder."
+    ],
+    "examples": [
+      "[ItemLocksFabric] No examples given yet..."
+    ],
+    "troubleshooting": [
+      "Itemlock mod is client-side only and does not work on servers.",
+      "Remove from your server mods folder"
+    ],
+    "links": {
+      "GitHub FAQ": "https://gist.github.com/Kirdow/d09eef9c8ddf10ad58947e76a6b918c5"
+    }
+  },
+  {
+    "id": 40,
+    "risk": "High",
+    "pattern": "java\\.lang\\.RuntimeException: Tried to read NBT tag with too high complexity, depth > [0-9]+",
+    "description": "A corrupted or excessively nested NBT structure is causing the save file or world data to be unreadable.",
+    "solution": "Use an NBT editor (e.g., NBTExplorer) to identify and remove the problematic NBT data. Restore the world from a backup if available.",
+    "causes": [
+      "A mod stored infinitely nested or malformed NBT data.",
+      "Corrupted world data due to a crash or forced shutdown.",
+      "Incompatible mods writing invalid NBT entries."
+    ],
+    "examples": [
+      "java.lang.RuntimeException: Tried to read NBT tag with too high complexity, depth > 512"
+    ],
+    "troubleshooting": [
+      "Open the world files with NBTExplorer to locate and fix the offending data.",
+      "Temporarily remove recently added mods to isolate which one created the invalid data.",
+      "Restore from a known good backup of the world."
+    ],
+    "links": {
+      "NBTExplorer": "https://github.com/jaquadro/NBTExplorer"
+    }
+  },
+  {
+    "id": 41,
+    "risk": "Medium",
+    "pattern": "Can't keep up! Is the server overloaded\\? Running [0-9]+ms or [0-9]+ ticks behind",
+    "description": "The server is experiencing lag and cannot process ticks at the expected rate.",
+    "solution": "Optimize server performance by allocating more RAM, reducing the number of mods/plugins, or upgrading hardware.",
+    "causes": [
+      "Insufficient RAM or CPU resources.",
+      "Too many entities, mods, or complex redstone contraptions.",
+      "Heavy chunk loading or world generation."
+    ],
+    "examples": [
+      "Can't keep up! Is the server overloaded? Running 2199ms or 43 ticks behind"
+    ],
+    "troubleshooting": [
+      "Allocate more RAM to the server.",
+      "Remove or limit heavy mods and resource-intensive builds.",
+      "Optimize server settings (e.g., view distance).",
+      "Check server hardware performance."
+    ],
+    "links": {
+      "Server Optimization Tips": "https://minecraft.fandom.com/wiki/Tutorials/Improving_frame_rate"
+    }
+  },
+  {
+    "id": 42,
+    "risk": "Low",
+    "pattern": "defineId called for: class net\\.minecraft\\.world\\.entity\\.TamableAnimal from interface dev\\.muon\\.medievalorigins\\.entity\\.IFollowingSummon",
+    "description": "A mod-related warning indicating data ID definition for a tamable animal entity that follows a summon interface.",
+    "solution": "Check if the Medieval Origins mod is up-to-date and compatible with the current Minecraft/Forge version. This is generally a harmless warning.",
+    "causes": [
+      "The mod 'Medieval Origins' or a related entity mod may be registering entities in an unusual way."
+    ],
+    "examples": [
+      "defineId called for: class net.minecraft.world.entity.TamableAnimal from interface dev.muon.medievalorigins.entity.IFollowingSummon"
+    ],
+    "troubleshooting": [
+      "Update or verify the Medieval Origins mod version.",
+      "Check the mod's issue tracker for similar warnings."
+    ],
+    "links": {
+      "Medieval Origins Mod": "https://www.curseforge.com/minecraft/mc-mods/medieval-origins"
+    }
+  },
+  {
+    "id": 43,
+    "risk": "Medium",
+    "pattern": "openjdk version \\\"(?<java_version>[\\d\\.]+_[\\d]+)\\\"",
+    "description": "Detected Java version.",
+    "solution": "Ensure the Java version matches the server or modpack requirements.",
+    "causes": [
+      "Not yet added..."
+    ],
+    "examples": [
+      "Not yet added..."
+    ],
+    "troubleshooting": [
+      "Not yet added..."
+    ],
+    "links": {
+      "Not yet added...": "Not yet added..."
+    }
+  },
+  {
+    "id": 44,
+    "risk": "Medium",
+    "pattern": "Minecraft version: (?<mc_version>[0-9\\.]+)",
+    "description": "Detected Minecraft version from logs.",
+    "solution": "Ensure mods are compatible with this version.",
+    "causes": [
+      "Not yet added..."
+    ],
+    "examples": [
+      "Not yet added..."
+    ],
+    "troubleshooting": [
+      "Not yet added..."
+    ],
+    "links": {
+      "Not yet added...": "Not yet added..."
+    }
+  },
+  {
+    "id": 45,
+    "risk": "High",
+    "pattern": "Missing required mod: (?<missing_mod>.+)",
+    "description": "A required mod, (${missing_mod}), is missing from the server configuration.",
+    "solution": "Ensure the mod (${missing_mod}) is installed and loaded.",
+    "modName": "${missing_mod}",
+    "causes": [
+      "The required mod is not present in the `mods/` folder.",
+      "The mod version is incompatible with the server version."
+    ],
+    "examples": [
+      "[ERROR]: Missing required mod: Mouse Tweaks",
+      "[ERROR]: Missing required mod: JourneyMap",
+      "[ERROR]: Missing required mod: Just Enough Items (JEI)"
+    ],
+    "troubleshooting": [
+      "Check the `mods/` folder to ensure the mod is installed.",
+      "Ensure the mod version is compatible with the server and other mods.",
+      "Download the missing mod from a trusted source (e.g., CurseForge)."
+    ],
+    "links": {
+      "CurseForge": "https://www.curseforge.com/",
+      "Feed The Beast - ModPacks": "https://www.feed-the-beast.com/modpacks?sort=featured"
+    }
+  },
+  {
     "id": 46,
     "risk": "High",
     "pattern": "java\\.lang\\.ClassNotFoundException: (?<class>[a-zA-Z0-9.]+)",
@@ -969,21 +924,21 @@
       "A mod dependency is missing.",
       "The mod is not compatible with the Minecraft or Forge version.",
       "The mod file is corrupted."
-  ],
+    ],
     "examples": [
       "java.lang.ClassNotFoundException: dev.shadowsoffire.apotheosis.ench.table.ApothEnchantmentMenu",
       "java.lang.ClassNotFoundException: fuzs.visualworkbench.world.inventory.ModCraftingMenu"
-  ],
+    ],
     "troubleshooting": [
       "Check the mod's documentation for required dependencies.",
       "Ensure all mods are compatible with the Minecraft and Forge versions.",
       "Re-download the mod files and verify their integrity."
-  ],
+    ],
     "links": {
       "Forge Modding Guide": "https://mcforge.readthedocs.io/en/latest/",
       "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
-  }
-},
+    }
+  },
   {
     "id": 47,
     "risk": "High",
@@ -1054,8 +1009,7 @@
       "Forge Modding Issues": "https://mcforge.readthedocs.io/en/latest/"
     }
   },
-    
-    {
+  {
     "id": 50,
     "risk": "Medium",
     "pattern": "Missing Mods.*: required:.*",
@@ -1065,43 +1019,42 @@
       "The mod is not present in the mods folder.",
       "The mod is incompatible with the Forge version."
     ],
-      "examples": [
-        "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)",
-        "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: [mod_name]@[version_range]"
+    "examples": [
+      "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)",
+      "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: [mod_name]@[version_range]"
     ],
-      "troubleshooting": [
-        "Check the mod's documentation for dependencies.",
-        "Download and add the missing mods to the mods folder.",
-        "Ensure all mods are compatible with the Minecraft and Forge versions."
+    "troubleshooting": [
+      "Check the mod's documentation for dependencies.",
+      "Download and add the missing mods to the mods folder.",
+      "Ensure all mods are compatible with the Minecraft and Forge versions."
     ],
-      "links": {
-        "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+    "links": {
+      "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
     }
   },
-    
-    {
-      "id": 51,
-      "risk": "Medium",
-      "pattern": "java\\.util\\.MissingResourceException: Missing font: ([\\w\\-\\.]+\\.ttf)",
-      "description": "The game or a mod is attempting to load a missing font file, causing a crash.",
-      "solution": "Ensure the required font file is present in the mod's assets folder or reinstall the mod to recover missing resources.",
-      "causes": [
-        "Corrupted or incomplete mod installation.",
-        "The required font file was removed or misplaced."
-  ],
-      "examples": [
-        "java.util.MissingResourceException: Missing font: inter-medium.ttf"
-  ],
+  {
+    "id": 51,
+    "risk": "Medium",
+    "pattern": "java\\.util\\.MissingResourceException: Missing font: ([\\w\\-\\.]+\\.ttf)",
+    "description": "The game or a mod is attempting to load a missing font file, causing a crash.",
+    "solution": "Ensure the required font file is present in the mod's assets folder or reinstall the mod to recover missing resources.",
+    "causes": [
+      "Corrupted or incomplete mod installation.",
+      "The required font file was removed or misplaced."
+    ],
+    "examples": [
+      "java.util.MissingResourceException: Missing font: inter-medium.ttf"
+    ],
     "troubleshooting": [
       "Verify that the font file (e.g., inter-medium.ttf) is present in the mod's resource directory.",
       "Re-download and reinstall the mod to ensure all resources are intact.",
       "Check if the mod is compatible with the current Minecraft and Forge versions."
-  ],
+    ],
     "links": {
       "Axiom Mod GitHub": "https://github.com/Moulberry/Axiom/issues"
-  }
-},
-    {
+    }
+  },
+  {
     "id": 52,
     "risk": "Low",
     "pattern": "\\(\\?s\\)SINTRYA CONNECTOR IS PRESENT!.*?https:\\/\\/github\\.com\\/Sintrya\\/Connector\\/issues",
@@ -1110,23 +1063,22 @@
     "causes": [
       "Compatibility issues between Connector and other mods.",
       "Unexpected behavior introduced by the Connector mod."
-  ],
+    ],
     "examples": [
       "SINYTRA CONNECTOR IS PRESENT!",
       "Please verify issues are not caused by Connector before reporting them to mod authors."
-  ],
+    ],
     "troubleshooting": [
       "Disable the Connector mod and test if the issue persists.",
       "Review the Connector mod's issue tracker for similar problems and potential fixes.",
       "Ensure all mods are updated to their latest compatible versions."
-  ],
+    ],
     "links": {
       "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues",
       "Github link": "https://github.com/Sinytra/Connector"
-  }
-},
-    
-    {
+    }
+  },
+  {
     "id": 53,
     "risk": "High",
     "pattern": "at com\\.moulberry\\.axiom\\..*java\\.lang\\.reflect\\.InvocationTargetException",
@@ -1135,23 +1087,22 @@
     "causes": [
       "Running the mod on an unsupported Java version (e.g., 17 instead of 8).",
       "Corrupted Axiom mod files or incompatible Forge/Minecraft versions."
-  ],
+    ],
     "examples": [
       "at com.moulberry.axiom.editor.EditorUI.loadFont",
       "java.lang.reflect.InvocationTargetException"
-  ],
+    ],
     "troubleshooting": [
       "Verify the required Java version for the mod (often Java 8 or 11).",
       "Switch to the appropriate Java version and restart the server.",
       "Ensure the Axiom mod is compatible with the current Minecraft version."
-  ],
+    ],
     "links": {
       "Axiom GitHub": "https://axiom.moulberry.com/",
       "Axiom Modrinth Link": "https://modrinth.com/mod/axiom"
-  }
-},
-
-    {
+    }
+  },
+  {
     "id": 54,
     "risk": "High",
     "pattern": "ModLauncher services:.*Exception.*",
@@ -1160,22 +1111,21 @@
     "causes": [
       "Incompatible mods loaded together.",
       "Mod dependencies are missing or outdated."
-  ],
+    ],
     "examples": [
       "ModLauncher launch target: forgeclient",
       "at cpw.mods.modlauncher.Launcher.main(Launcher.java:78)"
-  ],
+    ],
     "troubleshooting": [
       "Review the list of installed mods and their versions for conflicts.",
       "Ensure all mods are compatible with the current Minecraft and Forge versions.",
       "Temporarily remove suspect mods to identify the source of the crash."
-  ],
+    ],
     "links": {
       "Forge Mod Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/",
       "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
-  }
-},
-
+    }
+  },
   {
     "id": 55,
     "risk": "Medium",
@@ -1185,23 +1135,22 @@
     "causes": [
       "Missing or misplaced font file in the mod's resources.",
       "Corrupted mod files or incompatible Forge version."
-  ],
+    ],
     "examples": [
       "com.moulberry.axiom.editor.EditorUI.loadFont(EditorUI.java:326)"
-  ],
+    ],
     "troubleshooting": [
       "Ensure your graphics drivers are up to date",
       "Check for missing font files in the mod's directory.",
       "Reinstall the mod to ensure all files are intact.",
       "Verify the mod's compatibility with your Forge and Minecraft versions."
-  ],
+    ],
     "links": {
       "Axiom GitHub": "https://axiom.moulberry.com/",
       "Axiom Modrinth Link": "https://modrinth.com/mod/axiom"
-  }
-},
-
-    {
+    }
+  },
+  {
     "id": 56,
     "risk": "High",
     "pattern": "([\\w\\-\\.]+\\.jar)\\s+\\|([\\w\\s]+)\\s+\\|([\\w\\_]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: NOSIGNATURE",
@@ -1212,23 +1161,22 @@
       "The mod is corrupted or tampered with.",
       "The mod does not support the current Forge or Minecraft version.",
       "Missing required dependencies for the mod."
-  ],
+    ],
     "examples": [
       "Create_Questing-FORGE-1.20.1-1.0.0.jar            |Create Questing               |create_questing               |1.0.0               |ERROR     |Manifest: NOSIGNATURE"
-  ],
+    ],
     "troubleshooting": [
       "Re-download the mod from its official source.",
       "Ensure the mod's version matches the current Forge and Minecraft versions.",
       "Check for missing dependencies listed on the mod's documentation page.",
       "Look for alternative versions or updates that might address the issue."
-  ],
+    ],
     "links": {
       "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods",
       "Forge Mod Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
-  }
-},
-
-    {
+    }
+  },
+  {
     "id": 57,
     "risk": "High",
     "pattern": "(\\S+\\.jar)\\s+\\|([^\\|]+)\\s+\\|([^\\|]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: ([^\\s]+)",
@@ -1240,166 +1188,158 @@
       "The mod is incompatible with the current Forge or Minecraft version.",
       "The mod lacks a valid signature.",
       "Required dependencies for the mod are missing."
-  ],
+    ],
     "examples": [
       "Create_Questing-FORGE-1.20.1-1.0.0.jar            |Create Questing               |create_questing               |1.0.0               |ERROR     |Manifest: NOSIGNATURE",
       "AwesomeMod-1.16.5-2.3.4.jar                      |Awesome Mod                  |awesome_mod                  |2.3.4               |ERROR     |Manifest: INVALID",
       "ExampleMod-2.0.0-alpha.jar                       |Example Mod                  |example_mod                  |2.0.0-alpha         |ERROR     |Manifest: MISSING"
-  ],
+    ],
     "troubleshooting": [
       "Re-download the mod from an official or trusted source.",
       "Ensure all required dependencies are installed.",
       "Check compatibility with your current Forge and Minecraft versions.",
       "Look for updates or alternative versions of the mod.",
-    "Disable the problematic mod to test if the error resolves."
-  ],
+      "Disable the problematic mod to test if the error resolves."
+    ],
     "links": {
       "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods",
       "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/"
-  }
-},
-
-
-  {
-      "id": "58",
-      "risk": "Low",
-      "pattern": "SINYTRA CONNECTOR IS PRESENT!.*?Please verify issues are not caused by Connector before reporting them to mod authors\\.",
-      "description": "The Sinytra Connector mod is installed and might interfere with other mods.",
-      "solution": "Check if the issue persists without the Sinytra Connector mod. If it does, report it on the Sinytra Connector issue tracker.",
-      "causes": [
-          "Compatibility issues between Sinytra Connector and other mods.",
-          "Unexpected behavior introduced by the Sinytra Connector mod."
-      ],
-      "examples": [
-          "SINYTRA CONNECTOR IS PRESENT!",
-          "Please verify issues are not caused by Connector before reporting them to mod authors."
-      ],
-      "troubleshooting": [
-          "Disable the Sinytra Connector mod and check if the issue persists.",
-          "Review the Sinytra Connector mod issue tracker for related reports.",
-          "Update the mod to the latest version to resolve potential conflicts."
-      ],
-      "links": {
-          "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues"
-      }
+    }
   },
-    
   {
-      "id": "59",
-      "risk": "High",
-      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.MixinTransformerError.*?MixinProcessor\\.applyMixins",
-      "description": "A critical error occurred during mixin transformation.",
-      "solution": "This error is often caused by incompatible mods. Check the mods listed in the crash log and remove or update any potentially conflicting mods.",
-      "causes": [
-          "Conflicting mods during the mixin transformation process.",
-          "Outdated or incompatible mod versions."
-      ],
-      "examples": [
-          "org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: MixinProcessor.applyMixins failed."
-      ],
-      "troubleshooting": [
-          "Check the crash log for the affected mods and update them to the latest versions.",
-          "Remove any mods that are not compatible with the current Minecraft version."
-      ],
-      "links": {
-          "Mixin Troubleshooting Guide": "https://github.com/SpongePowered/Mixin/wiki/Troubleshooting"
-      }
-  },
-    
-  {
-      "id": "60",
-      "risk": "High",
-      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.MixinApplyError.*?FAILED during APPLY",
-      "description": "Mixin application failed during transformation.",
-      "solution": "Check if the affected mod is compatible with the installed Minecraft and Forge/Fabric versions. Update or remove the conflicting mod.",
-      "causes": [
-          "Mod incompatibility with the current version of Minecraft.",
-          "Missing or outdated dependencies for the affected mod."
-      ],
-      "examples": [
-          "org.spongepowered.asm.mixin.throwables.MixinApplyError: FAILED during APPLY"
-      ],
-      "troubleshooting": [
-          "Verify if the mod causing the error is compatible with the Minecraft version.",
-          "Ensure all required dependencies for the mod are installed and up-to-date."
-      ],
-      "links": {
-          "Mixin Documentation": "https://github.com/SpongePowered/Mixin/wiki"
-      }
-  },
-    
-  {
-      "id": "61",
-      "risk": "Medium",
-      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.ClassMetadataNotFoundException: .*",
-      "description": "A required class metadata was not found during mixin transformation.",
-      "solution": "Ensure all dependencies for the mod are installed and compatible with the modloader and Minecraft version. Verify if the mod author has released a fix for this issue.",
-      "causes": [
-          "Missing or outdated dependencies required by the mod.",
-          "Incompatibility with the installed Minecraft or Forge/Fabric version."
-      ],
-      "examples": [
-          "org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: net.minecraft.client.renderer.RenderType"
-      ],
-      "troubleshooting": [
-          "Install all missing dependencies for the mod.",
-          "Check the mod's documentation or support page for updates or fixes."
-      ],
-      "links": {
-          "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
-      }
-  },
-    
-  {
-      "id": "62",
-      "risk": "Medium",
-      "pattern": "Embeddium instance tainted by mods: \\[.*?oculus.*?\\]",
-      "description": "The Embeddium instance is being affected by the Oculus mod or others.",
-      "solution": "Try removing Oculus or other listed mods and see if the issue persists. Update mods to compatible versions.",
-      "modName": "${modName}",
-      "causes": [
-          "The Oculus mod is incompatible with other installed mods.",
-          "Outdated or conflicting mod versions are causing issues with Embeddium."
-      ],
-      "examples": [
-          "Embeddium instance tainted by mods: [oculus]"
-      ],
-      "troubleshooting": [
-          "Remove or update the Oculus mod to resolve compatibility issues.",
-          "Review the crash logs for other conflicting mods and update them."
-      ],
-      "links": {
-          "Oculus Mod GitHub": "https://github.com/kaptainwutax/Oculus"
-      }
-  },
-
-      {
-      "id": "63",
-      "risk": "High",
-      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.InvalidMixinException: .*?mixins\\.(?<mod1>[a-zA-Z0-9_.-]+)\\.compat\\.(?<mod2>[a-zA-Z0-9_.-]+)\\.json.*",
-      "description": "An InvalidMixinException occurred during mixin transformation involving '${mod1}' and '${mod2}'.",
-      "solution": "Check for missing or outdated dependencies for '${mod1}' and '${mod2}'. Ensure they are compatible with the current Minecraft, Forge, or Fabric versions.",
-      "modName": "${mod1}",
-      "causes": [
-          "The mod '${mod1}' is incompatible with the mod '${mod2}'.",
-          "Missing or corrupted dependencies required by one or both mods.",
-          "Incompatibility with the installed Forge or Fabric version."
+    "id": "58",
+    "risk": "Low",
+    "pattern": "SINYTRA CONNECTOR IS PRESENT!.*?Please verify issues are not caused by Connector before reporting them to mod authors\\.",
+    "description": "The Sinytra Connector mod is installed and might interfere with other mods.",
+    "solution": "Check if the issue persists without the Sinytra Connector mod. If it does, report it on the Sinytra Connector issue tracker.",
+    "causes": [
+      "Compatibility issues between Sinytra Connector and other mods.",
+      "Unexpected behavior introduced by the Sinytra Connector mod."
     ],
     "examples": [
-        "org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Unexpecteded ClassMetadataNotFoundException whilst transforming the mixin class: [MAIN Applicator Phase -> mixins.oculus.compat.dh.json:NonCullingFrustumMixin from mod oculus -> Apply Methods -> (IILcom/seibel/distanthorizons/coreapi/util/math/Mat4f;)V:update -> Transform Descriptor -> desc=Lcom/seibel/distanthorizons/coreapi/util/math/Mat4f;]"
+      "SINYTRA CONNECTOR IS PRESENT!",
+      "Please verify issues are not caused by Connector before reporting them to mod authors."
     ],
     "troubleshooting": [
-        "Ensure all dependencies for '${mod1}' and '${mod2}' are installed and compatible.",
-        "Update '${mod1}' and '${mod2}' to their latest versions to fix potential compatibility issues.",
-        "Check the mods' issue trackers or support pages for known problems and fixes.",
-        "Remove one of the conflicting mods (e.g., '${mod1}' or '${mod2}') if compatibility cannot be resolved."
+      "Disable the Sinytra Connector mod and check if the issue persists.",
+      "Review the Sinytra Connector mod issue tracker for related reports.",
+      "Update the mod to the latest version to resolve potential conflicts."
     ],
     "links": {
-        "${mod1} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod1}",
-        "${mod2} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod2}"
+      "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues"
     }
-}
-
+  },
+  {
+    "id": "59",
+    "risk": "High",
+    "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.MixinTransformerError.*?MixinProcessor\\.applyMixins",
+    "description": "A critical error occurred during mixin transformation.",
+    "solution": "This error is often caused by incompatible mods. Check the mods listed in the crash log and remove or update any potentially conflicting mods.",
+    "causes": [
+      "Conflicting mods during the mixin transformation process.",
+      "Outdated or incompatible mod versions."
+    ],
+    "examples": [
+      "org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: MixinProcessor.applyMixins failed."
+    ],
+    "troubleshooting": [
+      "Check the crash log for the affected mods and update them to the latest versions.",
+      "Remove any mods that are not compatible with the current Minecraft version."
+    ],
+    "links": {
+      "Mixin Troubleshooting Guide": "https://github.com/SpongePowered/Mixin/wiki/Troubleshooting"
+    }
+  },
+  {
+    "id": "60",
+    "risk": "High",
+    "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.MixinApplyError.*?FAILED during APPLY",
+    "description": "Mixin application failed during transformation.",
+    "solution": "Check if the affected mod is compatible with the installed Minecraft and Forge/Fabric versions. Update or remove the conflicting mod.",
+    "causes": [
+      "Mod incompatibility with the current version of Minecraft.",
+      "Missing or outdated dependencies for the affected mod."
+    ],
+    "examples": [
+      "org.spongepowered.asm.mixin.throwables.MixinApplyError: FAILED during APPLY"
+    ],
+    "troubleshooting": [
+      "Verify if the mod causing the error is compatible with the Minecraft version.",
+      "Ensure all required dependencies for the mod are installed and up-to-date."
+    ],
+    "links": {
+      "Mixin Documentation": "https://github.com/SpongePowered/Mixin/wiki"
+    }
+  },
+  {
+    "id": "61",
+    "risk": "Medium",
+    "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.ClassMetadataNotFoundException: .*",
+    "description": "A required class metadata was not found during mixin transformation.",
+    "solution": "Ensure all dependencies for the mod are installed and compatible with the modloader and Minecraft version. Verify if the mod author has released a fix for this issue.",
+    "causes": [
+      "Missing or outdated dependencies required by the mod.",
+      "Incompatibility with the installed Minecraft or Forge/Fabric version."
+    ],
+    "examples": [
+      "org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: net.minecraft.client.renderer.RenderType"
+    ],
+    "troubleshooting": [
+      "Install all missing dependencies for the mod.",
+      "Check the mod's documentation or support page for updates or fixes."
+    ],
+    "links": {
+      "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+    }
+  },
+  {
+    "id": "62",
+    "risk": "Medium",
+    "pattern": "Embeddium instance tainted by mods: \\[.*?oculus.*?\\]",
+    "description": "The Embeddium instance is being affected by the Oculus mod or others.",
+    "solution": "Try removing Oculus or other listed mods and see if the issue persists. Update mods to compatible versions.",
+    "modName": "${modName}",
+    "causes": [
+      "The Oculus mod is incompatible with other installed mods.",
+      "Outdated or conflicting mod versions are causing issues with Embeddium."
+    ],
+    "examples": [
+      "Embeddium instance tainted by mods: [oculus]"
+    ],
+    "troubleshooting": [
+      "Remove or update the Oculus mod to resolve compatibility issues.",
+      "Review the crash logs for other conflicting mods and update them."
+    ],
+    "links": {
+      "Oculus Mod GitHub": "https://github.com/kaptainwutax/Oculus"
+    }
+  },
+  {
+    "id": "63",
+    "risk": "High",
+    "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.InvalidMixinException: .*?mixins\\.(?<mod1>[a-zA-Z0-9_.-]+)\\.compat\\.(?<mod2>[a-zA-Z0-9_.-]+)\\.json.*",
+    "description": "An InvalidMixinException occurred during mixin transformation involving '${mod1}' and '${mod2}'.",
+    "solution": "Check for missing or outdated dependencies for '${mod1}' and '${mod2}'. Ensure they are compatible with the current Minecraft, Forge, or Fabric versions.",
+    "modName": "(${mod1}) and (${mod2})",
+    "causes": [
+      "The mod '${mod1}' is incompatible with the mod '${mod2}'.",
+      "Missing or corrupted dependencies required by one or both mods.",
+      "Incompatibility with the installed Forge or Fabric version."
+    ],
+    "examples": [
+      "org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Unexpecteded ClassMetadataNotFoundException whilst transforming the mixin class: [MAIN Applicator Phase -> mixins.oculus.compat.dh.json:NonCullingFrustumMixin from mod oculus -> Apply Methods -> (IILcom/seibel/distanthorizons/coreapi/util/math/Mat4f;)V:update -> Transform Descriptor -> desc=Lcom/seibel/distanthorizons/coreapi/util/math/Mat4f;]"
+    ],
+    "troubleshooting": [
+      "Ensure all dependencies for '${mod1}' and '${mod2}' are installed and compatible.",
+      "Update '${mod1}' and '${mod2}' to their latest versions to fix potential compatibility issues.",
+      "Check the mods' issue trackers or support pages for known problems and fixes.",
+      "Remove one of the conflicting mods (e.g., '${mod1}' or '${mod2}') if compatibility cannot be resolved."
+    ],
+    "links": {
+      "${mod1} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod1}",
+      "${mod2} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod2}"
+    }
+  }
 ]
 
   
