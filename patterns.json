@@ -1272,28 +1272,7 @@
     }
   },
   {
-    "id": "61",
-    "risk": "Medium",
-    "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.ClassMetadataNotFoundException: .*",
-    "description": "A required class metadata was not found during mixin transformation.",
-    "solution": "Ensure all dependencies for the mod are installed and compatible with the modloader and Minecraft version. Verify if the mod author has released a fix for this issue.",
-    "causes": [
-      "Missing or outdated dependencies required by the mod.",
-      "Incompatibility with the installed Minecraft or Forge/Fabric version."
-    ],
-    "examples": [
-      "org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: net.minecraft.client.renderer.RenderType"
-    ],
-    "troubleshooting": [
-      "Install all missing dependencies for the mod.",
-      "Check the mod's documentation or support page for updates or fixes."
-    ],
-    "links": {
-      "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
-    }
-  },
-  {
-    "id": "62",
+    "id": "63",
     "risk": "Medium",
     "pattern": "Embeddium instance tainted by mods: \\[.*?oculus.*?\\]",
     "description": "The Embeddium instance is being affected by the Oculus mod or others.",
@@ -1315,7 +1294,7 @@
     }
   },
   {
-    "id": "63",
+    "id": "64",
     "risk": "High",
     "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.InvalidMixinException: .*?mixins\\.(?<mod1>[a-zA-Z0-9_.-]+)\\.compat\\.(?<mod2>[a-zA-Z0-9_.-]+)\\.json.*",
     "description": "An InvalidMixinException occurred during mixin transformation involving '${mod1}' and '${mod2}'.",
