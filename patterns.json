@@ -1371,8 +1371,34 @@
       "links": {
           "Oculus Mod GitHub": "https://github.com/kaptainwutax/Oculus"
       }
-  }
+  },
 
+      {
+      "id": "63",
+      "risk": "High",
+      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.InvalidMixinException: .*?mixins\\.(?<mod1>[a-zA-Z0-9_.-]+)\\.compat\\.(?<mod2>[a-zA-Z0-9_.-]+)\\.json.*",
+      "description": "An InvalidMixinException occurred during mixin transformation involving '${mod1}' and '${mod2}'.",
+      "solution": "Check for missing or outdated dependencies for '${mod1}' and '${mod2}'. Ensure they are compatible with the current Minecraft, Forge, or Fabric versions.",
+      "modName": "${mod1}"
+      "causes": [
+          "The mod '${mod1}' is incompatible with the mod '${mod2}'.",
+          "Missing or corrupted dependencies required by one or both mods.",
+          "Incompatibility with the installed Forge or Fabric version."
+    ],
+    "examples": [
+        "org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: Unexpecteded ClassMetadataNotFoundException whilst transforming the mixin class: [MAIN Applicator Phase -> mixins.oculus.compat.dh.json:NonCullingFrustumMixin from mod oculus -> Apply Methods -> (IILcom/seibel/distanthorizons/coreapi/util/math/Mat4f;)V:update -> Transform Descriptor -> desc=Lcom/seibel/distanthorizons/coreapi/util/math/Mat4f;]"
+    ],
+    "troubleshooting": [
+        "Ensure all dependencies for '${mod1}' and '${mod2}' are installed and compatible.",
+        "Update '${mod1}' and '${mod2}' to their latest versions to fix potential compatibility issues.",
+        "Check the mods' issue trackers or support pages for known problems and fixes.",
+        "Remove one of the conflicting mods (e.g., '${mod1}' or '${mod2}') if compatibility cannot be resolved."
+    ],
+    "links": {
+        "${mod1} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod1}",
+        "${mod2} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod2}"
+    }
+}
 
 ]
 
