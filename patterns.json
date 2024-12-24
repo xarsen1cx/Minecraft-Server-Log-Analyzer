@@ -1339,33 +1339,7 @@
       "${mod1} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod1}",
       "${mod2} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod2}"
     }
-  },
-  {
-    "id": 64,
-    "risk": "High",
-    "pattern": "org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: com\\.seibel\\.distanthorizons\\.coreapi\\.util\\.math\\.Mat4f",
-    "description": "This error occurs due to a compatibility issue with the Distant Horizons mod and other mods or dependencies.",
-    "solution": "Verify mod versions and compatibility. Adjust or remove conflicting mods.",
-    "causes": [
-      "Incompatibility between Distant Horizons and Oculus or Embeddium.",
-      "Incorrect or mismatched versions of Distant Horizons.",
-      "Conflicting mixin transformations from other mods."
-  ],
-    "examples": [
-      "org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: com.seibel.distanthorizons.coreapi.util.math.Mat4f"
-  ],
-    "troubleshooting": [
-      "Update all mods to their latest versions compatible with Minecraft 1.20.1.",
-      "Remove Oculus or Distant Horizons and test the game.",
-      "Disable shaders to ensure they are not causing the conflict.",
-      "Check for compatibility patches between Distant Horizons and other mods like Oculus."
-  ],
-    "links": {
-      "Distant Horizons Mod Page": "https://www.curseforge.com/minecraft/mc-mods/distant-horizons",
-      "Oculus Mod Page": "https://www.curseforge.com/minecraft/mc-mods/oculus",
-      "Mixin Troubleshooting": "https://github.com/SpongePowered/Mixin/wiki"
   }
-}
   
 ]
 
