@@ -1318,6 +1318,90 @@
       "${mod1} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod1}",
       "${mod2} Issue Tracker": "https://www.curseforge.com/minecraft/mc-mods/${mod2}"
     }
+  },
+  {
+    "id": 65,
+    "risk": "High",
+    "pattern": "java\\.lang\\.IllegalArgumentException: Can't find block (?<block>[a-zA-Z0-9_:-]+)",
+    "description": "A block referenced in the mod or configuration is missing.",
+    "solution": "Ensure the mod providing the block '${block}' is installed and compatible with your Minecraft version.",
+    "causes": [
+      "The block '${block}' is not defined in the mod or configuration.",
+      "The mod providing the block is missing or outdated."
+    ],
+    "examples": [
+      "java.lang.IllegalArgumentException: Can't find block mystic:magic_block"
+    ],
+    "troubleshooting": [
+      "Verify the mod providing '${block}' is installed and up-to-date.",
+      "Check for typos in the configuration files referencing '${block}'."
+    ],
+    "links": {
+      "Forge Documentation": "https://mcforge.readthedocs.io/en/latest/"
+    }
+  },
+  {
+    "id": 66,
+    "risk": "Medium",
+    "pattern": "java\\.util\\.zip\\.ZipException: error in opening zip file",
+    "description": "A mod or plugin file is corrupted.",
+    "solution": "Re-download and replace the corrupted mod/plugin file.",
+    "causes": [
+      "The mod or plugin file is incomplete or corrupted.",
+      "File transfer errors during upload/download."
+    ],
+    "examples": [
+      "java.util.zip.ZipException: error in opening zip file: mods/examplemod.jar"
+    ],
+    "troubleshooting": [
+      "Re-download the mod/plugin from a trusted source.",
+      "Ensure no conflicting mods are causing the error."
+    ],
+    "links": {
+      "CurseForge": "https://www.curseforge.com/minecraft/mc-mods"
+    }
+  },
+  {
+    "id": 67,
+    "risk": "High",
+    "pattern": "net\\.minecraftforge\\.fml\\.common\\.MissingModsException",
+    "description": "A required mod is missing.",
+    "solution": "Install the required mod listed in the logs.",
+    "causes": [
+      "The mod is not present in the mods folder.",
+      "The mod's version is incompatible with the Minecraft version."
+    ],
+    "examples": [
+      "net.minecraftforge.fml.common.MissingModsException: Missing Mods: required: Forge@[14.23.5.2854,)"
+    ],
+    "troubleshooting": [
+      "Verify the required mod's presence in the mods folder.",
+      "Download and install the correct version of the mod from a trusted source."
+    ],
+    "links": {
+      "Forge Mod Compatibility Guide": "https://mcforge.readthedocs.io/en/latest/"
+    }
+  },
+  {
+    "id": 68,
+    "risk": "High",
+    "pattern": "java\\.lang\\.OutOfMemoryError: GC overhead limit exceeded",
+    "description": "The server ran out of memory due to excessive garbage collection.",
+    "solution": "Increase the allocated RAM for the server or optimize server performance.",
+    "causes": [
+      "Insufficient memory allocation for the server.",
+      "Excessive entity count or plugins causing high memory usage."
+    ],
+    "examples": [
+      "java.lang.OutOfMemoryError: GC overhead limit exceeded"
+    ],
+    "troubleshooting": [
+      "Allocate more RAM in the server startup settings.",
+      "Identify and remove resource-heavy mods/plugins."
+    ],
+    "links": {
+      "Memory Optimization": "https://minecraft.fandom.com/wiki/Tutorials/Server_optimization"
+    }
   }
   
 ]
