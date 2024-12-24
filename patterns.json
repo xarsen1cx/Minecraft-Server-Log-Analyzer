@@ -1207,6 +1207,7 @@
     "pattern": "([\\w\\-\\.]+\\.jar)\\s+\\|([\\w\\s]+)\\s+\\|([\\w\\_]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: NOSIGNATURE",
     "description": "A mod failed to load due to missing or invalid signature, or compatibility issues.",
     "solution": "Ensure the mod is downloaded from a trusted source, and verify its compatibility with the Forge and Minecraft versions.",
+    "modName": "(\\S+\\.jar)",
     "causes": [
       "The mod is corrupted or tampered with.",
       "The mod does not support the current Forge or Minecraft version.",
@@ -1233,7 +1234,7 @@
     "pattern": "(\\S+\\.jar)\\s+\\|([^\\|]+)\\s+\\|([^\\|]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: ([^\\s]+)",
     "description": "A mod encountered an error during loading, potentially due to missing or invalid signatures, or compatibility issues.",
     "solution": "Verify the mod's source, ensure compatibility with the current Forge and Minecraft versions, and check for dependencies.",
-    "modName": "((\\S+\\.jar))",
+    "modName": "(\\S+\\.jar)",
     "causes": [
       "The mod is corrupted or tampered with.",
       "The mod is incompatible with the current Forge or Minecraft version.",
