@@ -1257,9 +1257,121 @@
       "Minecraft CurseForge": "https://www.curseforge.com/minecraft/mc-mods",
       "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/"
   }
-}
+},
 
 
+  {
+      "id": "58",
+      "risk": "Low",
+      "pattern": "SINYTRA CONNECTOR IS PRESENT!.*?Please verify issues are not caused by Connector before reporting them to mod authors\\.",
+      "description": "The Sinytra Connector mod is installed and might interfere with other mods.",
+      "solution": "Check if the issue persists without the Sinytra Connector mod. If it does, report it on the Sinytra Connector issue tracker.",
+      "causes": [
+          "Compatibility issues between Sinytra Connector and other mods.",
+          "Unexpected behavior introduced by the Sinytra Connector mod."
+      ],
+      "examples": [
+          "SINYTRA CONNECTOR IS PRESENT!",
+          "Please verify issues are not caused by Connector before reporting them to mod authors."
+      ],
+      "troubleshooting": [
+          "Disable the Sinytra Connector mod and check if the issue persists.",
+          "Review the Sinytra Connector mod issue tracker for related reports.",
+          "Update the mod to the latest version to resolve potential conflicts."
+      ],
+      "links": {
+          "Connector Issue Tracker": "https://github.com/Sinytra/Connector/issues"
+      }
+  },
+    
+  {
+      "id": "59",
+      "risk": "High",
+      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.MixinTransformerError.*?MixinProcessor\\.applyMixins",
+      "description": "A critical error occurred during mixin transformation.",
+      "solution": "This error is often caused by incompatible mods. Check the mods listed in the crash log and remove or update any potentially conflicting mods.",
+      "causes": [
+          "Conflicting mods during the mixin transformation process.",
+          "Outdated or incompatible mod versions."
+      ],
+      "examples": [
+          "org.spongepowered.asm.mixin.transformer.throwables.MixinTransformerError: MixinProcessor.applyMixins failed."
+      ],
+      "troubleshooting": [
+          "Check the crash log for the affected mods and update them to the latest versions.",
+          "Remove any mods that are not compatible with the current Minecraft version."
+      ],
+      "links": {
+          "Mixin Troubleshooting Guide": "https://github.com/SpongePowered/Mixin/wiki/Troubleshooting"
+      }
+  },
+    
+  {
+      "id": "60",
+      "risk": "High",
+      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.MixinApplyError.*?FAILED during APPLY",
+      "description": "Mixin application failed during transformation.",
+      "solution": "Check if the affected mod is compatible with the installed Minecraft and Forge/Fabric versions. Update or remove the conflicting mod.",
+      "causes": [
+          "Mod incompatibility with the current version of Minecraft.",
+          "Missing or outdated dependencies for the affected mod."
+      ],
+      "examples": [
+          "org.spongepowered.asm.mixin.throwables.MixinApplyError: FAILED during APPLY"
+      ],
+      "troubleshooting": [
+          "Verify if the mod causing the error is compatible with the Minecraft version.",
+          "Ensure all required dependencies for the mod are installed and up-to-date."
+      ],
+      "links": {
+          "Mixin Documentation": "https://github.com/SpongePowered/Mixin/wiki"
+      }
+  },
+    
+  {
+      "id": "61",
+      "risk": "Medium",
+      "pattern": "org\\.spongepowered\\.asm\\.mixin\\.throwables\\.ClassMetadataNotFoundException: .*",
+      "description": "A required class metadata was not found during mixin transformation.",
+      "solution": "Ensure all dependencies for the mod are installed and compatible with the modloader and Minecraft version. Verify if the mod author has released a fix for this issue.",
+      "causes": [
+          "Missing or outdated dependencies required by the mod.",
+          "Incompatibility with the installed Minecraft or Forge/Fabric version."
+      ],
+      "examples": [
+          "org.spongepowered.asm.mixin.throwables.ClassMetadataNotFoundException: net.minecraft.client.renderer.RenderType"
+      ],
+      "troubleshooting": [
+          "Install all missing dependencies for the mod.",
+          "Check the mod's documentation or support page for updates or fixes."
+      ],
+      "links": {
+          "Forge Troubleshooting Guide": "https://mcforge.readthedocs.io/en/latest/gettingstarted/"
+      }
+  },
+    
+  {
+      "id": "62",
+      "risk": "Medium",
+      "pattern": "Embeddium instance tainted by mods: \\[.*?oculus.*?\\]",
+      "description": "The Embeddium instance is being affected by the Oculus mod or others.",
+      "solution": "Try removing Oculus or other listed mods and see if the issue persists. Update mods to compatible versions.",
+      "modName": "${modName}",
+      "causes": [
+          "The Oculus mod is incompatible with other installed mods.",
+          "Outdated or conflicting mod versions are causing issues with Embeddium."
+      ],
+      "examples": [
+          "Embeddium instance tainted by mods: [oculus]"
+      ],
+      "troubleshooting": [
+          "Remove or update the Oculus mod to resolve compatibility issues.",
+          "Review the crash logs for other conflicting mods and update them."
+      ],
+      "links": {
+          "Oculus Mod GitHub": "https://github.com/kaptainwutax/Oculus"
+      }
+  }
 
 
 ]
