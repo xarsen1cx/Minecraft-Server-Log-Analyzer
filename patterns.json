@@ -1402,6 +1402,27 @@
     "links": {
       "Memory Optimization": "https://minecraft.fandom.com/wiki/Tutorials/Server_optimization"
     }
+  },
+    {
+    "id": 69,
+    "risk": "High",
+    "pattern": "java\\.io\\.IOException:.*No space left on device.*",
+    "description": "The server's storage is full, preventing operations from completing.",
+    "solution": "Free up disk space or increase the storage capacity.",
+    "causes": [
+      "Insufficient storage on the server.",
+      "Excessive log or crash report files."
+    ],
+    "examples": [
+      "java.io.IOException: No space left on device"
+    ],
+    "troubleshooting": [
+      "Delete unnecessary files (e.g., logs, crash reports) to free up space.",
+      "Increase the allocated storage for the server."
+    ],
+    "links": {
+      "Server Maintenance Guide": "https://minecraft.fandom.com/wiki/Tutorials/Server_maintenance"
+    }
   }
   
 ]
