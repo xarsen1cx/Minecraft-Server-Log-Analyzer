@@ -1379,7 +1379,7 @@
       "pattern": "org\\.spongepowered\\.asm\\.mixin\\.transformer\\.throwables\\.InvalidMixinException: .*?mixins\\.(?<mod1>[a-zA-Z0-9_.-]+)\\.compat\\.(?<mod2>[a-zA-Z0-9_.-]+)\\.json.*",
       "description": "An InvalidMixinException occurred during mixin transformation involving '${mod1}' and '${mod2}'.",
       "solution": "Check for missing or outdated dependencies for '${mod1}' and '${mod2}'. Ensure they are compatible with the current Minecraft, Forge, or Fabric versions.",
-      "modName": "${mod1}"
+      "modName": "${mod1}",
       "causes": [
           "The mod '${mod1}' is incompatible with the mod '${mod2}'.",
           "Missing or corrupted dependencies required by one or both mods.",
