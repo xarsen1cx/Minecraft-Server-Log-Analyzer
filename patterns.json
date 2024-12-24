@@ -1104,7 +1104,7 @@
     {
     "id": 52,
     "risk": "Low",
-    "pattern": "(?s)SINYTRA CONNECTOR IS PRESENT!.*?https:\\/\\/github\\.com\\/Sinytra\\/Connector\\/issues",
+    "pattern": "\\(\\?s\\)SINTRYA CONNECTOR IS PRESENT!.*?https:\\/\\/github\\.com\\/Sintrya\\/Connector\\/issues",
     "description": "The Connector mod is installed and might be causing compatibility issues.",
     "solution": "Verify the issue with the Connector mod's issue tracker and temporarily remove it to test for conflicts.",
     "causes": [
@@ -1233,6 +1233,7 @@
     "pattern": "(\\S+\\.jar)\\s+\\|([^\\|]+)\\s+\\|([^\\|]+)\\s+\\|([\\d\\.]+)\\s+\\|ERROR\\s+\\|Manifest: ([^\\s]+)",
     "description": "A mod encountered an error during loading, potentially due to missing or invalid signatures, or compatibility issues.",
     "solution": "Verify the mod's source, ensure compatibility with the current Forge and Minecraft versions, and check for dependencies.",
+    "modName": "((\\S+\\.jar))",
     "causes": [
       "The mod is corrupted or tampered with.",
       "The mod is incompatible with the current Forge or Minecraft version.",
