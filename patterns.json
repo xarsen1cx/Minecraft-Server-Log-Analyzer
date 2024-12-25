@@ -1536,9 +1536,51 @@
     "links": {
       "Java Compatibility Guide": "https://adoptopenjdk.net/"
     }
+  },
+    {
+    "id": 75,
+    "risk": "High",
+    "pattern": "FoamFixTransformer:spliceClasses",
+    "description": "FoamFix attempted to optimize or patch Minecraft classes and encountered an issue.",
+    "solution": "1. Client-Side: Edit FoamFix's configuration file (`config/foamfix.cfg`) and set `optimizedBlockPos=false`, 2. If this is located on your server, remove it.",
+    "causes": [
+      "FoamFix optimization causing class transformation errors.",
+      "Incompatibility with certain mods or configurations."
+    ],
+    "examples": [
+      "[pl.asie.foamfix.coremod.FoamFixTransformer:spliceClasses:101]: Added INTERFACE: pl/asie/foamfix/coremod/patches/IFoamFixWorldRemovable"
+    ],
+    "troubleshooting": [
+      "Modify FoamFix configuration to disable problematic optimizations.",
+      "Replace FoamFix with a newer or alternative mod.",
+      "If this is located on a server your running, remove FoamFix."
+    ],
+    "links": {
+      "FoamFix Configuration": "https://github.com/asiekierka/FoamFix"
+    }
+  },
+    {
+    "id": 76,
+    "risk": "Medium",
+    "pattern": "Re-entrant transformer '.*' was detected and will no longer process meta class data",
+    "description": "A re-entrant transformer was detected, which can indicate mod conflicts or incompatibility.",
+    "solution": "Identify and update the mod associated with the transformer. Temporarily disable the mod to test for conflicts.",
+    "causes": [
+      "Conflicting mods using the same transformer.",
+      "Broken or outdated mod transformer."
+    ],
+    "examples": [
+      "A re-entrant transformer '$wrapper.svenhjol.charm.base.CharmClassTransformer' was detected and will no longer process meta class data"
+    ],
+    "troubleshooting": [
+      "Disable mods incrementally to identify the problematic one.",
+      "Update or replace the mod with a newer version."
+    ],
+    "links": {
+      "Mod Transformer Issues": "https://forge.gemwire.uk/wiki/Main_Page"
+    }
   }
 
-  
 ]
 
   
