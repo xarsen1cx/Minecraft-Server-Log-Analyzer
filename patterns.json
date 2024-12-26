@@ -966,7 +966,7 @@
   },
   {
     "id": 48,
-    "risk": "High",
+    "risk": "Medium",
     "pattern": "Reference map '(?<file>[a-zA-Z0-9.-]+)' for (?<mixin>[a-zA-Z0-9.-]+) could not be read",
     "description": "The reference map file (${file}) for a mod mixin (${mixin}) could not be loaded.",
     "solution": "Ensure the mod is installed correctly and compatible with the current Forge version. Re-download the mod if necessary.",
@@ -1011,7 +1011,7 @@
   },
   {
     "id": 50,
-    "risk": "Medium",
+    "risk": "High",
     "pattern": "Missing Mods.*: required:.*",
     "description": "One or more required mods are missing, preventing the server from starting.",
     "solution": "Install the missing mods as listed in the logs and ensure all dependencies are satisfied.",
@@ -1273,7 +1273,7 @@
   },
   {
     "id": "63",
-    "risk": "Medium",
+    "risk": "High",
     "pattern": "Embeddium instance tainted by mods: \\[.*?oculus.*?\\]",
     "description": "The Embeddium instance is being affected by the Oculus mod or others.",
     "solution": "Try removing Oculus or other listed mods and see if the issue persists. Update mods to compatible versions.",
@@ -1426,7 +1426,7 @@
   },
   {
     "id": 70,
-    "risk": "High",
+    "risk": "Medium",
     "pattern": "Mod file .* is missing mods\\.toml file",
     "description": "A mod file is missing the required mods.toml descriptor, preventing it from loading.",
     "solution": "Re-download or update the affected mod and ensure compatibility with the Forge and Minecraft versions.",
@@ -1472,7 +1472,7 @@
   },
   {
     "id": 72,
-    "risk": "High",
+    "risk": "Medium",
     "pattern": "@Mixin target .+ was not found .+",
     "description": "A mixin is targeting a class that does not exist, likely due to a missing or incompatible mod.",
     "solution": "Ensure all required mods are installed and up to date. Check for mod compatibility.",
@@ -1517,7 +1517,7 @@
   },
   {
     "id": 74,
-    "risk": "High",
+    "risk": "Medium",
     "pattern": "Compatibility level set to JAVA_\\d+",
     "description": "Indicates the Java version being used for the mod loader.",
     "solution": "Ensure the required Java version is installed and matches the mod loader's compatibility.",
@@ -1603,7 +1603,7 @@
   },
     {
     "id": 78,
-    "risk": "High",
+    "risk": "Low",
     "pattern": "Found mod file (.*\\.jar) .*\\n.*Found mod file \\1",
     "description": "Duplicate mod files detected in the 'mods' folder. This can cause conflicts and prevent Minecraft from starting.",
     "solution": "Check the 'mods' folder and remove any duplicate mod files. Keep only one version of each mod.",
