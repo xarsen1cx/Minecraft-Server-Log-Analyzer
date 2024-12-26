@@ -1579,7 +1579,53 @@
     "links": {
       "Mod Transformer Issues": "https://forge.gemwire.uk/wiki/Main_Page"
     }
+  },
+    {
+    "id": 77,
+    "risk": "High",
+    "pattern": "Error loading class: mekanism\\/client\\/render\\/entity\\/RenderFlame",
+    "description": "The class `mekanism.client.render.entity.RenderFlame` could not be found, indicating an issue with the Mekanism mod.",
+    "solution": "Ensure the Mekanism mod is correctly installed and compatible with the Forge and Minecraft versions.",
+    "causes": [
+      "Missing Mekanism mod files.",
+      "Incompatible version of Mekanism with Forge or Minecraft."
+    ],
+    "examples": [
+      "Error loading class: mekanism/client/render/entity/RenderFlame (java.lang.ClassNotFoundException: mekanism.client.render.entity.RenderFlame)"
+    ],
+    "troubleshooting": [
+      "Reinstall the Mekanism mod.",
+      "Update Mekanism to a version compatible with your Forge and Minecraft setup."
+    ],
+    "links": {
+      "Mekanism Mod": "https://www.curseforge.com/minecraft/mc-mods/mekanism"
+    }
+  },
+    {
+    "id": 101,
+    "risk": "High",
+    "pattern": "Found mod file (.*\\.jar) .*\\n.*Found mod file \\1",
+    "description": "Duplicate mod files detected in the 'mods' folder. This can cause conflicts and prevent Minecraft from starting.",
+    "solution": "Check the 'mods' folder and remove any duplicate mod files. Keep only one version of each mod.",
+    "causes": [
+      "Multiple versions of the same mod are present in the 'mods' folder.",
+      "Accidentally copying mod files multiple times.",
+      "Mod manager or installation tool creating duplicates."
+    ],
+    "examples": [
+      "Found mod file BiomesOPlenty-1.20.1-18.0.0.592.jar of type MOD",
+      "Found mod file BiomesOPlenty-1.20.1-18.0.0.592 - Kopie.jar of type MOD"
+    ],
+    "troubleshooting": [
+      "Open the 'mods' folder and sort files by name to locate duplicates.",
+      "Delete older or extra versions of each mod, keeping only one.",
+      "Restart Minecraft to ensure the issue is resolved."
+    ],
+    "links": {
+      "Forge Mod Loading Tips": "https://minecraft.fandom.com/wiki/Tutorials/Adding_mods"
+    }
   }
+
 
 ]
 
