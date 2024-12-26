@@ -1652,9 +1652,30 @@
     "Iris Shaders Mod": "https://modrinth.com/mod/iris",
     "Github Sodium Issues": "https://github.com/CaffeineMC/sodium/issues"   
   }
+},
+  {
+  "id": 80,
+  "risk": "Low",
+  "pattern": "Pack \\\".*\\\" is not valid! Can't load it\\.",
+  "description": "The specified shader pack could not be loaded.",
+  "solution": "Ensure the shader pack is compatible with your modpack and installed version of Forge.",
+  "causes": [
+    "Corrupted shader pack file.",
+    "Incompatible shader version with Forge or mods.",
+    "Missing or incorrect configuration."
+  ],
+  "examples": [
+    "Pack \"ComplementaryReimagined_r1.0.zip\" is not valid! Can't load it."
+  ],
+  "troubleshooting": [
+    "Download the latest version of the shader pack.",
+    "Verify compatibility with the current Forge version.",
+    "Ensure proper configuration in the shader settings."
+  ],
+  "links": {
+    "Shader Troubleshooting": "https://optifine.net/downloads"
+  }
 }
-
-
 
 ]
 
