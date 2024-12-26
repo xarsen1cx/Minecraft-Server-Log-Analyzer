@@ -1602,7 +1602,7 @@
     }
   },
     {
-    "id": 101,
+    "id": 78,
     "risk": "High",
     "pattern": "Found mod file (.*\\.jar) .*\\n.*Found mod file \\1",
     "description": "Duplicate mod files detected in the 'mods' folder. This can cause conflicts and prevent Minecraft from starting.",
@@ -1624,7 +1624,36 @@
     "links": {
       "Forge Mod Loading Tips": "https://minecraft.fandom.com/wiki/Tutorials/Adding_mods"
     }
+  },
+  {
+  "id": 79,
+  "risk": "High",
+  "pattern": "Error loading class: net/caffeinemc/mods/sodium/.* \\(java\\.lang\\.ClassNotFoundException: net\\.caffeinemc\\.mods\\.sodium\\..*\\)",
+  "description": "This error occurs when a mod is unable to find a required Sodium class, indicating a compatibility issue or missing dependency.",
+  "solution": "Verify mod compatibility and ensure Sodium is correctly installed. If using Optifine, remove it as it conflicts with Sodium.",
+  "causes": [
+    "Optifine is installed alongside Sodium, causing conflicts.",
+    "Incorrect modloader (e.g., Forge instead of Fabric).",
+    "Missing or corrupted Sodium files.",
+    "Dependency conflict with other mods modifying the rendering pipeline.",
+    "Check for other performance mods that might conflict (e.g., Optifine or Rubidium)."
+  ],
+  "examples": [
+    "Error loading class: net/caffeinemc/mods/sodium/api/memory/MemoryIntrinsics (java.lang.ClassNotFoundException: net.caffeinemc.mods.sodium.api.memory.MemoryIntrinsics)"
+  ],
+  "troubleshooting": [
+    "Remove either Optifine or Sodium from the mods folder.",
+    "Ensure you are using the correct modloader for Sodium (Fabric).",
+    "Check for missing or outdated dependencies for Sodium.",
+    "Use an alternative shader mod like Iris if shaders are needed with Sodium."
+  ],
+  "links": {
+    "Sodium Mod Page": "https://modrinth.com/mod/sodium",
+    "Iris Shaders Mod": "https://modrinth.com/mod/iris",
+    "Github Sodium Issues": "https://github.com/CaffeineMC/sodium/issues"   
   }
+}
+
 
 
 ]
