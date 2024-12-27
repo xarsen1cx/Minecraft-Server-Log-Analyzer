@@ -1829,6 +1829,9 @@
   "troubleshooting": [
     "Update your graphics drivers to the latest version.",
     "Adjust graphics settings or disable specific mods that impact rendering."
+  ],
+  "troubleshooting": [
+    "None given at this time"
   ]
 },
   {
@@ -1848,6 +1851,9 @@
     "If experiencing authentication issues, ensure your account is logged in correctly.",
     "Verify the launcher is connected to the correct Microsoft or Mojang account.",
     "Re-login to your Minecraft account to refresh the access token."
+  ],
+  "troubleshooting": [
+    "None given at this time"
   ]
 }
 
