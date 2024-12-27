@@ -1837,7 +1837,7 @@
   {
     "id": 88,
     "risk": "Low",
-    "pattern": "--accessToken,\\s+\\?+",
+    "pattern": "--accessToken,\\s+\\?{7}",
     "description": "The access token is hidden for security purposes.",
     "solution": "This is a normal security measure to prevent leaking sensitive information such as user authentication tokens. No action is required unless you encounter authentication issues.",
     "causes": [
