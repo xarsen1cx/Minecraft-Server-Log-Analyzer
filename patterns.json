@@ -1701,8 +1701,54 @@
     "Copycat Mod Download": "https://www.curseforge.com/minecraft/mc-mods/copycat",
     "Forge Installation Guide": "https://minecraft.fandom.com/wiki/Mods/Installing_Forge_mods"
   }
+},
+  {
+  "id": 82,
+  "risk": "Medium",
+  "pattern": "File northstar:sounds/entity/.*\\.ogg does not exist",
+  "description": "This error occurs when a required sound file for the Northstar mod is missing, which may lead to incomplete or silent audio effects.",
+  "solution": "Check the mod installation for missing or corrupted sound files. Reinstall the mod if necessary.",
+  "causes": [
+    "The sound file is missing from the mod's assets folder.",
+    "An incomplete or corrupted mod installation.",
+    "The mod version is incompatible with the current Minecraft or Forge version."
+  ],
+  "examples": [
+    "File northstar:sounds/entity/mars_toad/toad_hurt1.ogg does not exist"
+  ],
+  "troubleshooting": [
+    "Verify the integrity of the Northstar mod files in the mods folder.",
+    "Download and reinstall the latest compatible version of the Northstar mod.",
+    "Check for mod dependencies or conflicts that might affect asset loading."
+  ],
+  "links": {
+    "Northstar Mod Documentation": "https://www.curseforge.com/minecraft/mc-mods/northstar"
+  }
+},
+  {
+  "id": 83,
+  "risk": "Medium",
+  "pattern": "Failed to load model vs_clockwork:models/.*\\.json",
+  "description": "This error occurs when a required model file for the VS Clockwork mod is missing or contains invalid JSON data.",
+  "solution": "Check the mod installation for missing or corrupted model files. Verify that the JSON files in the mod folder are properly formatted.",
+  "causes": [
+    "The model file is missing from the mod's assets folder.",
+    "The JSON file for the model is corrupted or empty.",
+    "An incomplete or corrupted mod installation."
+  ],
+  "examples": [
+    "Failed to load model vs_clockwork:models/block/heat_pipe/casing.json"
+  ],
+  "troubleshooting": [
+    "Verify the integrity of the VS Clockwork mod files in the mods folder.",
+    "Open the model JSON file to ensure it is not empty or corrupted.",
+    "Reinstall the mod from a trusted source to ensure all assets are included."
+  ],
+  "links": {
+    "VS Clockwork Mod Documentation": "https://www.curseforge.com/minecraft/mc-mods/vs-clockwork",
+    "Minecraft JSON Model Documentation": "https://minecraft.fandom.com/wiki/JSON_model_format"
+  }
 }
-
 
 ]
 
