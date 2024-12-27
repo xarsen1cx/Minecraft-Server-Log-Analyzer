@@ -1,6 +1,6 @@
 [
     { "date": "2024-12-24", "update": "New feature added, by scrolling down the page, you can check which mc, modloader, java versions by entering your .jar mod file-name"},
-    { "date": "2024-12-24", "update": "New Milestone hit for number of errors catch = 80 total"},
+    { "date": "2024-12-24", "update": "New Milestone hit for number of errors catch = 90 total"},
     { "date": "2024-12-20", "update": "Added: If a log catches mod missing, it will suggest links depending on the version and modloader you selected."},
     { "date": "2024-12-20", "update": "Added more Trace errors, fix some back-end issues, added to FAQ"},
     { "date": "2024-12-19", "update": "Fixed back-end to handle huge trace logs."},
