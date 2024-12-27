@@ -1811,7 +1811,10 @@
     "Identify and disable conflicting mods.",
     "Check for compatibility patches or updates.",
     "Report the conflict to the mod developers."
-  ]
+  ],
+  "links": {
+    "No links at this time": "No links at this time"
+  }
 },
   {
   "id": 87,
@@ -1833,30 +1836,7 @@
   "links": {
     "No links at this time": "No links at this time"
   }
-},
-  {
-    "id": 88,
-    "risk": "Low",
-    "pattern": "--accessToken,\\s+\\?{7}",
-    "description": "The access token is hidden for security purposes.",
-    "solution": "This is a normal security measure to prevent leaking sensitive information such as user authentication tokens. No action is required unless you encounter authentication issues.",
-    "causes": [
-      "The access token is redacted intentionally to protect sensitive data.",
-      "An authentication issue may occur if the token is invalid."
-    ],
-    "examples": [
-      "[27Dec2024 16:47:50.535] [main/INFO] [...] --accessToken, ????????, --clientId, MTRjZDk2MWYtYmFhMy00NTFkLThmZDItMzFjY2Y1YjRiZTMw, --xuid, 2535449716821545"
-    ],
-    "troubleshooting": [
-      "If experiencing authentication issues, ensure your account is logged in correctly.",
-      "Verify the launcher is connected to the correct Microsoft or Mojang account.",
-      "Re-login to your Minecraft account to refresh the access token."
-    ],
-    "links": {
-      "No links at this time": "No links at this time"
-    }
-  }
-
+}
 
 
 ]
