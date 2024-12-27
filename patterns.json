@@ -1748,6 +1748,51 @@
     "VS Clockwork Mod Documentation": "https://www.curseforge.com/minecraft/mc-mods/vs-clockwork",
     "Minecraft JSON Model Documentation": "https://minecraft.fandom.com/wiki/JSON_model_format"
   }
+},
+  {
+  "id": 84,
+  "risk": "Medium",
+  "pattern": "java\\.io\\.FileNotFoundException: .*\\.jar \\(No such file or directory\\)",
+  "description": "This error occurs when the specified .jar file for the server or mod is missing.",
+  "solution": "Ensure the .jar file exists and is correctly named.",
+  "causes": [
+    "The .jar file was deleted or moved.",
+    "Incorrect file path or name in the startup script.",
+    "Corrupt or incomplete server/mod installation."
+  ],
+  "examples": [
+    "java.io.FileNotFoundException: server.jar (No such file or directory)"
+  ],
+  "troubleshooting": [
+    "Verify the file name and path in the server startup script.",
+    "Check if the .jar file is present in the server directory.",
+    "Re-download or re-install the missing file."
+  ],
+  "links": {
+    "Server Setup Guide": "https://minecraft.fandom.com/wiki/Tutorials/Setting_up_a_server"
+  }
+},
+  {
+  "id": 85,
+  "risk": "Low",
+  "pattern": "org\\.bukkit\\.plugin\\.InvalidPluginException: Unsupported API version",
+  "description": "This error occurs when a plugin uses an API version unsupported by the server.",
+  "solution": "Update the plugin or downgrade the server version.",
+  "causes": [
+    "The plugin is designed for a newer server version.",
+    "Server version is incompatible with the plugin."
+  ],
+  "examples": [
+    "org.bukkit.plugin.InvalidPluginException: Unsupported API version"
+  ],
+  "troubleshooting": [
+    "Download and install a version of the plugin compatible with the server.",
+    "Upgrade or downgrade the server to match the plugin's requirements.",
+    "Consider alternative plugins compatible with the current server version."
+  ],
+  "links": {
+    "Plugin Compatibility Guide": "https://minecraft.fandom.com/wiki/Tutorials/Plugins"
+  }
 }
 
 ]
